@@ -1,0 +1,15 @@
+{
+  "Navigation": {
+    "prayerTimes": "Prayer Times",
+    "monthlyCalendar": "Monthly Calendar",
+    "forbiddenTimes": "Forbidden Times",
+    "qiblaDirection": "Qibla Direction"
+  },
+  "Prayer": {
+    "fajr": "Fajr",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha"
+  }
+}
