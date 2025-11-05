@@ -10,3 +10,35 @@ export interface PrayerTimesResponse {
     sunrise?: string;
   };
 }
+
+//
+// src/types/index.ts
+export interface PrayerTime {
+  name: string;
+  time: string;
+  timestamp: number;
+  isCurrent?: boolean;
+  isNext?: boolean;
+}
+
+export interface LocationData {
+  lat: number;
+  lng: number;
+  city: string;
+  country: string;
+  timezone: string;
+}
+
+export interface PrayerCalculationMethod {
+  name: string;
+  value: string;
+  description: string;
+}
+
+export interface ForbiddenTime {
+  period: string;
+  duration: string;
+  reason: string;
+  startTime?: string;
+  endTime?: string;
+}
