@@ -1,15 +1,39 @@
 {
-  "Navigation": {
+  "Home": {
+    "title": "Islamic Prayer Times",
+    "subtitle": "Accurate prayer times, forbidden prayer times, and Islamic calendar based on your location",
     "prayerTimes": "Prayer Times",
-    "monthlyCalendar": "Monthly Calendar",
     "forbiddenTimes": "Forbidden Times",
+    "monthlyCalendar": "Monthly Calendar",
     "qiblaDirection": "Qibla Direction"
   },
   "Prayer": {
     "fajr": "Fajr",
+    "sunrise": "Sunrise",
     "dhuhr": "Dhuhr",
     "asr": "Asr",
     "maghrib": "Maghrib",
-    "isha": "Isha"
+    "isha": "Isha",
+    "current": "Current",
+    "next": "Next"
+  },
+  "Navigation": {
+    "home": "Home",
+    "prayerTimes": "Prayer Times",
+    "forbiddenTimes": "Forbidden Times",
+    "monthlyCalendar": "Monthly Calendar",
+    "qiblaDirection": "Qibla Direction"
+  },
+  "Common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "location": "Location",
+    "time": "Time",
+    "date": "Date"
+  },
+  "HijriDate": {
+    "currentDate": "Today's Date",
+    "hijriYear": "AH"
   }
 }

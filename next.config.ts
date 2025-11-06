@@ -46,19 +46,52 @@
 
 // module.exports = withNextIntl(nextConfig);
 // next.config.js
-const withNextIntl = require("next-intl/plugin")();
+// const withNextIntl = require("next-intl/plugin")();
+
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   experimental: {
+//     appDir: true,
+//   },
+//   i18n: {
+//     locales: ["en", "bn"],
+//     defaultLocale: "en",
+//   },
+//   compress: true,
+//   poweredByHeader: false,
+// };
+
+// module.exports = withNextIntl(nextConfig);
+// next.config.js
+// const withNextIntl = require("next-intl/plugin")("./i18n.ts"); // ← Point to i18n.ts
+
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   experimental: {
+//     appDir: true,
+//   },
+//   compress: true,
+//   poweredByHeader: false,
+//   images: {
+//     domains: ["localhost"],
+//   },
+// };
+
+// module.exports = withNextIntl(nextConfig);
+//
+// next.config.js
+const withNextIntl = require("next-intl/plugin")("./src/i18n/request.ts");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
     appDir: true,
   },
-  i18n: {
-    locales: ["en", "bn"],
-    defaultLocale: "en",
-  },
   compress: true,
   poweredByHeader: false,
+  images: {
+    domains: ["localhost"],
+  },
 };
 
 module.exports = withNextIntl(nextConfig);

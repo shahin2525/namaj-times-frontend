@@ -1,15 +1,39 @@
 {
-  "Navigation": {
+  "Home": {
+    "title": "ইসলামিক নামাজের সময়সূচী",
+    "subtitle": "আপনার অবস্থান অনুযায়ী সঠিক নামাজের সময়, নিষিদ্ধ সময় এবং ইসলামিক ক্যালেন্ডার পান",
     "prayerTimes": "নামাজের সময়",
-    "monthlyCalendar": "মাসিক ক্যালেন্ডার",
     "forbiddenTimes": "নিষিদ্ধ সময়",
+    "monthlyCalendar": "মাসিক ক্যালেন্ডার",
     "qiblaDirection": "কিবলা দিক"
   },
   "Prayer": {
     "fajr": "ফজর",
+    "sunrise": "সূর্যোদয়",
     "dhuhr": "জোহর",
     "asr": "আসর",
     "maghrib": "মাগরিব",
-    "isha": "ইশা"
+    "isha": "ইশা",
+    "current": "বর্তমান",
+    "next": "পরবর্তী"
+  },
+  "Navigation": {
+    "home": "হোম",
+    "prayerTimes": "নামাজের সময়",
+    "forbiddenTimes": "নিষিদ্ধ সময়",
+    "monthlyCalendar": "মাসিক ক্যালেন্ডার",
+    "qiblaDirection": "কিবলা দিক"
+  },
+  "Common": {
+    "loading": "লোড হচ্ছে...",
+    "error": "ত্রুটি",
+    "retry": "পুনরায় চেষ্টা করুন",
+    "location": "অবস্থান",
+    "time": "সময়",
+    "date": "তারিখ"
+  },
+  "HijriDate": {
+    "currentDate": "আজকের তারিখ",
+    "hijriYear": "হিজরি"
   }
 }
