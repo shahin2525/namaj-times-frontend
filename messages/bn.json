@@ -35,5 +35,19 @@
   "HijriDate": {
     "currentDate": "আজকের তারিখ",
     "hijriYear": "হিজরি"
+  },
+
+  "Location": {
+    "currentLocation": "বর্তমান অবস্থান",
+    "useCurrentLocation": "বর্তমান অবস্থান ব্যবহার করুন",
+    "useDemoLocation": "ডেমো অবস্থান ব্যবহার করুন",
+    "detecting": "অবস্থান শনাক্ত করা হচ্ছে...",
+    "enterManual": "বা ম্যানুয়ালি অবস্থান লিখুন:",
+    "cityPlaceholder": "শহরের নাম লিখুন",
+    "setLocation": "অবস্থান সেট করুন",
+    "geolocationNotSupported": "আপনার ব্রাউজার জিওলোকেশন সাপোর্ট করে না",
+    "locationAccessDenied": "অবস্থান এক্সেস ডিনাই করা হয়েছে। অনুগ্রহ করে অবস্থান এক্সেস দিন অথবা ম্যানুয়ালি লিখুন।",
+    "unknownCity": "অজানা শহর",
+    "unknownCountry": "অজানা দেশ"
   }
 }

@@ -1,147 +1,127 @@
-// "use client";
-// import { useEffect, useState } from "react";
-// import { fetchPrayerTimes } from "@/lib/api";
-// import type { PrayerTimesResponse } from "@/types";
+// src/hooks/usePrayerTimes.ts
+// import { useState, useEffect } from "react";
+// import { PrayerTime, LocationData } from "@/types";
+// import { calculatePrayerTimes } from "@/lib/prayer-calculations";
 
-// export default function usePrayerTimes(location?: {
-//   lat: number;
-//   lng: number;
-// }) {
-//   const [data, setData] = useState<PrayerTimesResponse | null>(null);
-//   const [loading, setLoading] = useState(true);
+// export function usePrayerTimes(location: LocationData | null) {
+//   const [prayerTimes, setPrayerTimes] = useState<PrayerTime[]>([]);
+//   const [isLoading, setIsLoading] = useState(true);
 //   const [error, setError] = useState<string | null>(null);
 
 //   useEffect(() => {
-//     let mounted = true;
-//     setLoading(true);
-//     fetchPrayerTimes(location)
-//       .then((d) => {
-//         if (mounted) setData(d);
-//       })
-//       .catch((e) => {
-//         if (mounted) setError(String(e));
-//       })
-//       .finally(() => {
-//         if (mounted) setLoading(false);
-//       });
-//     return () => {
-//       mounted = false;
-//     };
-//   }, [location?.lat, location?.lng]);
+//     if (!location) {
+//       setIsLoading(false);
+//       return;
+//     }
 
-//   return { data, loading, error };
-// }
-
-// "use client";
-// import { useEffect, useState } from "react";
-// import { fetchPrayerTimes } from "@/lib/api";
-// import type { PrayerTimesResponse } from "@/types";
-
-// export default function usePrayerTimes(location?: {
-//   lat: number;
-//   lng: number;
-// }) {
-//   const [data, setData] = useState<PrayerTimesResponse | null>(null);
-//   const [loading, setLoading] = useState(true);
-//   const [error, setError] = useState<string | null>(null);
-
-//   useEffect(() => {
-//     if (!location) return;
-
-//     let isMounted = true;
-
-//     const getPrayerTimes = async () => {
-//       setLoading(true); // ✅ called inside async function
+//     const updatePrayerTimes = () => {
 //       try {
-//         const d = await fetchPrayerTimes(location);
-//         if (isMounted) setData(d);
-//         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-//       } catch (e: any) {
-//         if (isMounted) setError(String(e));
+//         setIsLoading(true);
+//         const times = calculatePrayerTimes(
+//           new Date(),
+//           location.lat,
+//           location.lng
+//         );
+//         const formattedTimes: PrayerTime[] = Object.entries(times).map(
+//           ([name, time]) => ({
+//             name: name.charAt(0).toUpperCase() + name.slice(1),
+//             time,
+//             timestamp: new Date(
+//               `${new Date().toDateString()} ${time}`
+//             ).getTime(),
+//           })
+//         );
+
+//         // Mark current and next prayers
+//         const now = new Date();
+//         const currentTime = now.getTime();
+
+//         const updatedTimes = formattedTimes.map((prayer, index, array) => {
+//           const isCurrent =
+//             currentTime >= prayer.timestamp &&
+//             (index === array.length - 1 ||
+//               currentTime < array[index + 1]?.timestamp);
+//           const isNext =
+//             !isCurrent &&
+//             currentTime < prayer.timestamp &&
+//             (index === 0 || currentTime >= array[index - 1]?.timestamp);
+
+//           return { ...prayer, isCurrent, isNext };
+//         });
+
+//         setPrayerTimes(updatedTimes);
+//         setError(null);
+//       } catch (err) {
+//         setError(
+//           err instanceof Error
+//             ? err.message
+//             : "Failed to calculate prayer times"
+//         );
 //       } finally {
-//         if (isMounted) setLoading(false);
+//         setIsLoading(false);
 //       }
 //     };
 
-//     getPrayerTimes();
+//     updatePrayerTimes();
 
-//     return () => {
-//       isMounted = false;
-//     };
-//   }, [location?.lat, location?.lng]);
+//     // Update every minute
+//     const interval = setInterval(updatePrayerTimes, 60000);
+//     return () => clearInterval(interval);
+//   }, [location]);
 
-//   return { data, loading, error };
+//   return { prayerTimes, isLoading, error };
 // }
 // src/hooks/usePrayerTimes.ts
-import { useState, useEffect } from "react";
-import { PrayerTime, LocationData } from "@/types";
-import { calculatePrayerTimes } from "@/lib/prayer-calculations";
+"use client";
 
-export function usePrayerTimes(location: LocationData | null) {
+import { useState, useEffect } from "react";
+import { Location } from "./useLocation";
+
+export interface PrayerTime {
+  name: string;
+  time: string;
+  isCurrent: boolean;
+  isNext: boolean;
+}
+
+export function usePrayerTimes(location: Location | null) {
   const [prayerTimes, setPrayerTimes] = useState<PrayerTime[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!location) {
-      setIsLoading(false);
-      return;
-    }
+    if (!location) return;
 
-    const updatePrayerTimes = () => {
+    const fetchPrayerTimes = async () => {
+      setIsLoading(true);
+      setError(null);
+
       try {
-        setIsLoading(true);
-        const times = calculatePrayerTimes(
-          new Date(),
-          location.lat,
-          location.lng
-        );
-        const formattedTimes: PrayerTime[] = Object.entries(times).map(
-          ([name, time]) => ({
-            name: name.charAt(0).toUpperCase() + name.slice(1),
-            time,
-            timestamp: new Date(
-              `${new Date().toDateString()} ${time}`
-            ).getTime(),
-          })
-        );
+        // This is a mock implementation - replace with your actual API call
+        const mockPrayerTimes: PrayerTime[] = [
+          { name: "Fajr", time: "05:30", isCurrent: false, isNext: true },
+          { name: "Sunrise", time: "06:45", isCurrent: false, isNext: false },
+          { name: "Dhuhr", time: "12:15", isCurrent: true, isNext: false },
+          { name: "Asr", time: "15:45", isCurrent: false, isNext: false },
+          { name: "Maghrib", time: "18:20", isCurrent: false, isNext: false },
+          { name: "Isha", time: "19:35", isCurrent: false, isNext: false },
+        ];
 
-        // Mark current and next prayers
-        const now = new Date();
-        const currentTime = now.getTime();
-
-        const updatedTimes = formattedTimes.map((prayer, index, array) => {
-          const isCurrent =
-            currentTime >= prayer.timestamp &&
-            (index === array.length - 1 ||
-              currentTime < array[index + 1]?.timestamp);
-          const isNext =
-            !isCurrent &&
-            currentTime < prayer.timestamp &&
-            (index === 0 || currentTime >= array[index - 1]?.timestamp);
-
-          return { ...prayer, isCurrent, isNext };
-        });
-
-        setPrayerTimes(updatedTimes);
-        setError(null);
+        setPrayerTimes(mockPrayerTimes);
       } catch (err) {
-        setError(
-          err instanceof Error
-            ? err.message
-            : "Failed to calculate prayer times"
-        );
+        setError("Failed to fetch prayer times");
+        console.error("Error fetching prayer times:", err);
       } finally {
         setIsLoading(false);
       }
     };
 
-    updatePrayerTimes();
-
-    // Update every minute
-    const interval = setInterval(updatePrayerTimes, 60000);
-    return () => clearInterval(interval);
+    fetchPrayerTimes();
   }, [location]);
 
-  return { prayerTimes, isLoading, error };
+  return {
+    prayerTimes,
+    isLoading,
+    error,
+  };
 }

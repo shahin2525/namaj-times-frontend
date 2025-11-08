@@ -35,5 +35,18 @@
   "HijriDate": {
     "currentDate": "Today's Date",
     "hijriYear": "AH"
+  },
+  "Location": {
+    "currentLocation": "Current Location",
+    "useCurrentLocation": "Use Current Location",
+    "useDemoLocation": "Use Demo Location",
+    "detecting": "Detecting Location...",
+    "enterManual": "Or enter location manually:",
+    "cityPlaceholder": "Enter city name",
+    "setLocation": "Set Location",
+    "geolocationNotSupported": "Geolocation is not supported by your browser",
+    "locationAccessDenied": "Location access denied. Please allow location access or enter manually.",
+    "unknownCity": "Unknown City",
+    "unknownCountry": "Unknown Country"
   }
 }
