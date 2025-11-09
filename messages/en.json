@@ -15,7 +15,8 @@
     "maghrib": "Maghrib",
     "isha": "Isha",
     "current": "Current",
-    "next": "Next"
+    "next": "Next",
+    "passed": "Passed"
   },
   "Navigation": {
     "home": "Home",
@@ -30,7 +31,8 @@
     "retry": "Retry",
     "location": "Location",
     "time": "Time",
-    "date": "Date"
+    "date": "Date",
+    "lastUpdated": "Last updated"
   },
   "HijriDate": {
     "currentDate": "Today's Date",

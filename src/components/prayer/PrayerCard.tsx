@@ -1,74 +1,196 @@
 // "use client";
-// import type { PrayerTimesResponse } from "@/types";
 
-// export default function PrayerCard({ data }: { data: PrayerTimesResponse }) {
-//   const { times, date, location } = data;
+// interface PrayerTime {
+//   name: string;
+//   time: string;
+//   isCurrent: boolean;
+//   isNext: boolean;
+// }
+
+// interface PrayerCardProps {
+//   prayer: PrayerTime;
+//   isCurrent: boolean;
+//   isNext: boolean;
+// }
+
+// export default function PrayerCard({
+//   prayer,
+//   isCurrent,
+//   isNext,
+// }: PrayerCardProps) {
 //   return (
-//     <div className="max-w-md mx-auto bg-white dark:bg-gray-900 shadow rounded-lg p-6">
-//       <div className="mb-4">
-//         <div className="text-sm text-muted-foreground">
-//           {location?.name || "Current Location"}
+//     <div
+//       className={`p-4 rounded-lg border transition-colors ${
+//         isCurrent
+//           ? "bg-islamic-green text-white border-islamic-green"
+//           : isNext
+//           ? "bg-green-50 border-green-200"
+//           : "bg-gray-50 border-gray-200"
+//       }`}
+//     >
+//       <div className="flex justify-between items-center">
+//         <div className="flex items-center gap-3">
+//           <span className="font-semibold text-lg">{prayer.name}</span>
+//           {isCurrent && (
+//             <span className="px-2 py-1 text-xs bg-white text-islamic-green rounded-full font-medium">
+//               Current
+//             </span>
+//           )}
+//           {isNext && !isCurrent && (
+//             <span className="px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full font-medium">
+//               Next
+//             </span>
+//           )}
 //         </div>
-//         <div className="text-2xl font-semibold">{date}</div>
+//         <span className="text-xl font-bold">{prayer.time}</span>
 //       </div>
-
-//       <ul className="space-y-3">
-//         {Object.entries(times).map(([k, v]) => (
-//           <li key={k} className="flex justify-between">
-//             <span className="capitalize">{k}</span>
-//             <span className="font-medium">{v}</span>
-//           </li>
-//         ))}
-//       </ul>
 //     </div>
 //   );
 // }
+// components/prayer/PrayerCard.tsx
 "use client";
-
-interface PrayerTime {
-  name: string;
-  time: string;
-  isCurrent: boolean;
-  isNext: boolean;
-}
+import { PrayerTime } from "@/hooks/usePrayerTimes";
 
 interface PrayerCardProps {
   prayer: PrayerTime;
+  locale: "en" | "bn";
   isCurrent: boolean;
   isNext: boolean;
+  isPassed: boolean;
+  index: number;
 }
 
 export default function PrayerCard({
   prayer,
+  locale,
   isCurrent,
   isNext,
+  isPassed,
+  index,
 }: PrayerCardProps) {
+  // Get prayer name based on locale
+  const prayerName = locale === "bn" ? prayer.nameBn : prayer.name;
+
+  // Status text based on locale
+  const statusText = isCurrent
+    ? locale === "bn"
+      ? "বর্তমান"
+      : "Current"
+    : isNext
+    ? locale === "bn"
+      ? "পরবর্তী"
+      : "Next"
+    : "";
+
   return (
     <div
-      className={`p-4 rounded-lg border transition-colors ${
+      className={`
+      relative p-4 rounded-xl border-2 transition-all duration-300 transform hover:scale-[1.02]
+      ${
         isCurrent
-          ? "bg-islamic-green text-white border-islamic-green"
+          ? "border-green-500 bg-green-50 shadow-lg"
           : isNext
-          ? "bg-green-50 border-green-200"
-          : "bg-gray-50 border-gray-200"
-      }`}
+          ? "border-blue-400 bg-blue-50"
+          : isPassed
+          ? "border-gray-200 bg-gray-50 opacity-75"
+          : "border-gray-200 bg-white"
+      }
+    `}
     >
+      {/* Prayer Indicator */}
+      <div
+        className={`
+        absolute -left-2 top-1/2 transform -translate-y-1/2 w-3 h-3 rounded-full
+        ${
+          isCurrent
+            ? "bg-green-500 animate-pulse"
+            : isNext
+            ? "bg-blue-400"
+            : "bg-gray-300"
+        }
+      `}
+      ></div>
+
       <div className="flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <span className="font-semibold text-lg">{prayer.name}</span>
-          {isCurrent && (
-            <span className="px-2 py-1 text-xs bg-white text-islamic-green rounded-full font-medium">
-              Current
-            </span>
-          )}
-          {isNext && !isCurrent && (
-            <span className="px-2 py-1 text-xs bg-green-100 text-green-800 rounded-full font-medium">
-              Next
-            </span>
-          )}
+        <div className="flex items-center space-x-4">
+          {/* Prayer Icon/Number */}
+          <div
+            className={`
+            w-10 h-10 rounded-full flex items-center justify-center font-semibold text-white
+            ${
+              isCurrent
+                ? "bg-green-500"
+                : isNext
+                ? "bg-blue-400"
+                : isPassed
+                ? "bg-gray-400"
+                : "bg-islamic-green"
+            }
+          `}
+          >
+            {index + 1}
+          </div>
+
+          {/* Prayer Name */}
+          <div>
+            <h3
+              className={`font-semibold text-lg ${
+                isCurrent
+                  ? "text-green-700"
+                  : isNext
+                  ? "text-blue-700"
+                  : isPassed
+                  ? "text-gray-500"
+                  : "text-gray-800"
+              }`}
+            >
+              {prayerName}
+            </h3>
+            {statusText && (
+              <span
+                className={`
+                text-xs font-medium px-2 py-1 rounded-full
+                ${
+                  isCurrent
+                    ? "bg-green-100 text-green-800"
+                    : "bg-blue-100 text-blue-800"
+                }
+              `}
+              >
+                {statusText}
+              </span>
+            )}
+          </div>
         </div>
-        <span className="text-xl font-bold">{prayer.time}</span>
+
+        {/* Prayer Time */}
+        <div
+          className={`
+          text-2xl font-bold
+          ${
+            isCurrent
+              ? "text-green-600"
+              : isNext
+              ? "text-blue-600"
+              : isPassed
+              ? "text-gray-400"
+              : "text-islamic-green"
+          }
+        `}
+        >
+          {prayer.time}
+        </div>
       </div>
+
+      {/* Progress bar for current prayer */}
+      {isCurrent && (
+        <div className="mt-3 w-full bg-green-200 rounded-full h-1">
+          <div
+            className="bg-green-500 h-1 rounded-full animate-pulse"
+            style={{ width: "50%" }} // You can calculate actual progress
+          ></div>
+        </div>
+      )}
     </div>
   );
 }

@@ -15,7 +15,8 @@
     "maghrib": "মাগরিব",
     "isha": "ইশা",
     "current": "বর্তমান",
-    "next": "পরবর্তী"
+    "next": "পরবর্তী",
+    "passed": "সমাপ্ত"
   },
   "Navigation": {
     "home": "হোম",
@@ -30,7 +31,8 @@
     "retry": "পুনরায় চেষ্টা করুন",
     "location": "অবস্থান",
     "time": "সময়",
-    "date": "তারিখ"
+    "date": "তারিখ",
+    "lastUpdated": "সর্বশেষ আপডেট"
   },
   "HijriDate": {
     "currentDate": "আজকের তারিখ",
