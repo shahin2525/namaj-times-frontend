@@ -48,7 +48,22 @@ body {
     opacity: 0.7;
   }
 }
+/*
+/*Additional CSS Enhancement (Optional)
+/* Add to your globals.css */
+.bg-islamic-green {
+  background-color: #0a5c36;
+}
 
+.text-islamic-green {
+  color: #0a5c36;
+}
+
+/* Ensure good contrast for active states */
+.bg-white.text-gray-900 {
+  color: #1a202c; /* Very dark gray for best contrast */
+}
+/*
 /* Loading skeleton */
 .skeleton {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
