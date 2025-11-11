@@ -1,5 +1,5 @@
 /* src/app/globals.css */
-@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import "tailwindcss";
 
@@ -24,10 +24,10 @@ body {
   line-height: 1.6;
 }
 
-.arabic-text {
+/* .arabic-text {
   font-family: "Scheherazade New", serif;
   direction: rtl;
-}
+} */
 
 /* Mobile-first responsive design */
 .container-responsive {
