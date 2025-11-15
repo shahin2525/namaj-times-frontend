@@ -96,7 +96,8 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
       <div className="min-h-screen bg-gradient-to-b from-islamic-cream to-white flex flex-col">
         <Header locale={locale} />
-        <main className="flex-1 container-responsive py-4">{children}</main>
+        <div className="h-7"></div> {/* This adds fixed 32px space */}
+        <main className="flex-1 container-responsive py-8">{children}</main>
         <Footer />
       </div>
     </NextIntlClientProvider>
@@ -117,7 +118,7 @@ export async function generateMetadata({
 
   const metadata = {
     en: {
-      title: "Islamic Prayer Times - Accurate Salah Times",
+      title: "Islamic Prayer Times - Accurate Salah Times ",
       description:
         "Get accurate prayer times, forbidden prayer times, and Islamic calendar based on your location.",
     },

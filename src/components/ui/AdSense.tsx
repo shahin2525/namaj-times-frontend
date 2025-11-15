@@ -33,7 +33,7 @@ export default function AdSense({
       <ins
         className="adsbygoogle"
         style={{ display: "block" }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" // Replace with your AdSense ID
+        data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_CLIENT} // Replace with your AdSense ID
         data-ad-slot={slot}
         data-ad-format={format}
         data-full-width-responsive={responsive}

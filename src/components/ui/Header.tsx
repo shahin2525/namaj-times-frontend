@@ -187,7 +187,7 @@ export default function Header({ locale }: HeaderProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex gap-4 items-center space-x-6">
             {navItems.map((item) => {
               const Icon = item.icon;
               const isActive = pathname === item.href;

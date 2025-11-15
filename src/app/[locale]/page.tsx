@@ -1,43 +1,3 @@
-// // src/app/[locale]/page.tsx
-// import PrayerTimes from "@/components/prayer/PrayerTimes";
-// import HijriDate from "@/components/prayer/HijriDate";
-// import ForbiddenTimes from "@/components/prayer/ForbiddenTimes";
-// import AdSense from "@/components/ui/AdSense";
-
-// export default function HomePage() {
-//   return (
-//     <div className="space-y-8">
-//       {/* Hero Section */}
-//       <section className="text-center py-8">
-//         <h1 className="text-4xl md:text-5xl font-bold text-islamic-green mb-4">
-//           Islamic Prayer Times
-//         </h1>
-//         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-//           Accurate prayer times, forbidden prayer times, and Islamic calendar
-//           based on your location
-//         </p>
-//       </section>
-
-//       {/* AdSense Top */}
-//       <AdSense slot="top-banner" />
-
-//       {/* Current Date */}
-//       <HijriDate />
-
-//       {/* Main Prayer Times */}
-//       <PrayerTimes />
-
-//       {/* AdSense Middle */}
-//       <AdSense slot="middle-banner" />
-
-//       {/* Forbidden Times */}
-//       <ForbiddenTimes />
-
-//       {/* AdSense Bottom */}
-//       <AdSense slot="bottom-banner" />
-//     </div>
-//   );
-// }
 // src/app/[locale]/page.tsx
 // import PrayerTimes from '@/components/prayer/PrayerTimes';
 // import HijriDate from '@/components/prayer/HijriDate';
@@ -110,14 +70,24 @@ export default function HomePage() {
   return (
     <div className="space-y-8">
       {/* Hero Section */}
-      <section className="text-center py-8">
+      {/* // code 1 */}
+      <section className="py-8">
+        <div className="flex flex-col items-center text-center">
+          <h1 className="text-2xl md:text-5xl font-bold text-islamic-green mb-4">
+            {t("title")}
+          </h1>
+          <p className="text-xl text-gray-600 max-w-2xl">{t("subtitle")}</p>
+        </div>
+      </section>
+      {/* // code 2 */}
+      {/* <section className="text-center py-8">
         <h1 className="text-4xl md:text-5xl font-bold text-islamic-green mb-4">
           {t("title")}
         </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto w-full">
           {t("subtitle")}
         </p>
-      </section>
+      </section> */}
 
       {/* AdSense Top */}
       <AdSense slot="top-banner" />
