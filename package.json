@@ -9,9 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@umalqura/core": "^0.0.7",
     "adhan": "^4.0.1",
+    "hijri-converter": "^1.1.1",
     "hijri-date": "^0.2.2",
     "lucide-react": "^0.552.0",
+    "moment-hijri": "^3.0.0",
     "next": "16.0.1",
     "next-intl": "^4.4.0",
     "react": "19.2.0",
@@ -20,6 +23,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/moment-hijri": "^2.1.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

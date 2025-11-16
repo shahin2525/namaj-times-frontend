@@ -93,6 +93,7 @@ export default function HomePage() {
       <AdSense slot="top-banner" />
 
       {/* Current Date */}
+
       <HijriDate />
 
       {/* Main Prayer Times */}
