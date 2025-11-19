@@ -1,6 +1,156 @@
+// // components/prayer/PrayerTimes.tsx
+// "use client";
+// import { useState } from "react";
+// import { useTranslations, useLocale } from "next-intl";
+// import { usePrayerTimes, CalculationMethod } from "@/hooks/usePrayerTimes";
+// import { useLocation } from "@/hooks/useLocation";
+// import PrayerCard from "./PrayerCard";
+// import LoadingSpinner from "../ui/LoadingSpinner";
+// import { validateLocale } from "@/lib/utils";
+
+// export default function PrayerTimes() {
+//   const locale = useLocale(); // Get current locale from next-intl
+//   const { location, isLoading: locationLoading } = useLocation();
+//   const [calculationMethod, setCalculationMethod] =
+//     useState<CalculationMethod>("BD-DS");
+//   const [asrMethod, setAsrMethod] = useState<"Standard" | "Hanafi">("Standard");
+
+//   const {
+//     prayerTimes,
+//     isLoading: prayerLoading,
+//     error,
+//   } = usePrayerTimes({
+//     location,
+//     locale: locale as "en" | "bn", // Pass locale to hook
+//     method: calculationMethod,
+//     asrMethod: asrMethod,
+//   });
+
+//   const t = useTranslations("Prayer");
+//   const commonT = useTranslations("Common");
+
+//   if (locationLoading) {
+//     return <LoadingSpinner />;
+//   }
+
+//   return (
+//     <section className="max-w-4xl mx-auto">
+//       <div className="bg-white rounded-2xl shadow-lg p-6">
+//         {/* Calculation Method Selector */}
+//         <div className="mb-6 p-4 bg-gray-50 rounded-lg">
+//           <h3 className="font-semibold mb-3">
+//             {locale === "bn" ? "গণনা পদ্ধতি" : "Calculation Method"}
+//           </h3>
+//           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+//             <div>
+//               <label className="block text-sm font-medium mb-2">
+//                 {locale === "bn" ? "প্রধান পদ্ধতি" : "Main Method"}
+//               </label>
+//               <select
+//                 value={calculationMethod}
+//                 onChange={(e) =>
+//                   setCalculationMethod(e.target.value as CalculationMethod)
+//                 }
+//                 className="w-full p-2 border border-gray-300 rounded-md"
+//               >
+//                 <option value="BD-DS">
+//                   {locale === "bn"
+//                     ? "বাংলাদেশ ইসলামিক ফাউন্ডেশন"
+//                     : "Bangladesh Islamic Foundation"}
+//                 </option>
+//                 <option value="BD-UA">
+//                   {locale === "bn"
+//                     ? "ইসলামিক ইউনিভার্সিটি, করাচি"
+//                     : "Islamic University, Karachi"}
+//                 </option>
+//                 <option value="MWL">
+//                   {locale === "bn"
+//                     ? "মুসলিম ওয়ার্ল্ড লীগ"
+//                     : "Muslim World League"}
+//                 </option>
+//                 <option value="Karachi">
+//                   {locale === "bn"
+//                     ? "করাচি বিশ্ববিদ্যালয়"
+//                     : "University of Karachi"}
+//                 </option>
+//               </select>
+//             </div>
+//             <div>
+//               <label className="block text-sm font-medium mb-2">
+//                 {locale === "bn" ? "আসর পদ্ধতি" : "Asr Method"}
+//               </label>
+//               <select
+//                 value={asrMethod}
+//                 onChange={(e) =>
+//                   setAsrMethod(e.target.value as "Standard" | "Hanafi")
+//                 }
+//                 className="w-full p-2 border border-gray-300 rounded-md"
+//               >
+//                 <option value="Standard">
+//                   {locale === "bn" ? "শাফেয়ী/হাম্বলী" : "Shafi'i/Hanbali"}
+//                 </option>
+//                 <option value="Hanafi">
+//                   {locale === "bn" ? "হানাফী" : "Hanafi"}
+//                 </option>
+//               </select>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Prayer Times Display */}
+//         {prayerLoading ? (
+//           <div className="grid gap-4">
+//             {[...Array(6)].map((_, i) => (
+//               <div key={i} className="skeleton h-20 rounded-lg"></div>
+//             ))}
+//           </div>
+//         ) : error ? (
+//           <div className="text-center py-8 text-red-600">
+//             <p>{error}</p>
+//             <button
+//               onClick={() => window.location.reload()}
+//               className="mt-4 px-4 py-2 bg-islamic-green text-white rounded-lg"
+//             >
+//               {locale === "bn" ? "পুনরায় চেষ্টা করুন" : "Try Again"}
+//             </button>
+//           </div>
+//         ) : (
+//           <div className="grid gap-3 md:gap-4">
+//             {prayerTimes?.map((prayer, index) => (
+//               <PrayerCard
+//                 key={prayer.name}
+//                 prayer={prayer}
+//                 // locale={locale}
+//                 locale={validateLocale(locale)}
+//                 isCurrent={prayer.isCurrent}
+//                 isNext={prayer.isNext}
+//                 isPassed={prayer.isPassed}
+//                 index={index}
+//               />
+//             ))}
+//           </div>
+//         )}
+
+//         {/* Last Updated & Location Info */}
+//         <div className="mt-6 text-center text-sm text-gray-500">
+//           <p>
+//             {locale === "bn" ? "সর্বশেষ আপডেট" : "Last updated"}:{" "}
+//             {new Date().toLocaleTimeString(locale === "bn" ? "bn-BD" : "en-US")}
+//           </p>
+//           {location && (
+//             <p className="mt-1">
+//               {locale === "bn" ? "অবস্থান" : "Location"}: {location.city},{" "}
+//               {location.country}
+//             </p>
+//           )}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 // components/prayer/PrayerTimes.tsx
 "use client";
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { usePrayerTimes, CalculationMethod } from "@/hooks/usePrayerTimes";
 import { useLocation } from "@/hooks/useLocation";
@@ -9,142 +159,301 @@ import LoadingSpinner from "../ui/LoadingSpinner";
 import { validateLocale } from "@/lib/utils";
 
 export default function PrayerTimes() {
-  const locale = useLocale(); // Get current locale from next-intl
+  const locale = useLocale();
   const { location, isLoading: locationLoading } = useLocation();
   const [calculationMethod, setCalculationMethod] =
     useState<CalculationMethod>("BD-DS");
   const [asrMethod, setAsrMethod] = useState<"Standard" | "Hanafi">("Standard");
 
+  // Memoized prayer times configuration
+  const prayerConfig = useMemo(
+    () => ({
+      location,
+      locale: locale as "en" | "bn",
+      method: calculationMethod,
+      asrMethod: asrMethod,
+    }),
+    [location, locale, calculationMethod, asrMethod]
+  );
+
   const {
     prayerTimes,
     isLoading: prayerLoading,
     error,
-  } = usePrayerTimes({
-    location,
-    locale: locale as "en" | "bn", // Pass locale to hook
-    method: calculationMethod,
-    asrMethod: asrMethod,
-  });
+  } = usePrayerTimes(prayerConfig);
 
-  const t = useTranslations("Prayer");
-  const commonT = useTranslations("Common");
+  // Memoized calculation method options
+  const calculationMethodOptions = useMemo(
+    () => [
+      {
+        value: "BD-DS",
+        en: "Bangladesh Islamic Foundation",
+        bn: "বাংলাদেশ ইসলামিক ফাউন্ডেশন",
+      },
+      {
+        value: "BD-UA",
+        en: "Islamic University, Karachi",
+        bn: "ইসলামিক ইউনিভার্সিটি, করাচি",
+      },
+      { value: "MWL", en: "Muslim World League", bn: "মুসলিম ওয়ার্ল্ড লীগ" },
+      {
+        value: "Karachi",
+        en: "University of Karachi",
+        bn: "করাচি বিশ্ববিদ্যালয়",
+      },
+    ],
+    []
+  );
+
+  // Memoized Asr method options
+  const asrMethodOptions = useMemo(
+    () => [
+      { value: "Standard", en: "Shafi'i/Hanbali", bn: "শাফেয়ী/হাম্বলী" },
+      { value: "Hanafi", en: "Hanafi", bn: "হানাফী" },
+    ],
+    []
+  );
+
+  // Optimized event handlers
+  const handleCalculationMethodChange = useCallback(
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setCalculationMethod(e.target.value as CalculationMethod);
+    },
+    []
+  );
+
+  const handleAsrMethodChange = useCallback(
+    (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setAsrMethod(e.target.value as "Standard" | "Hanafi");
+    },
+    []
+  );
+
+  const handleRetry = useCallback(() => {
+    window.location.reload();
+  }, []);
+
+  // Memoized last updated time
+  const lastUpdatedTime = useMemo(
+    () =>
+      new Date().toLocaleTimeString(locale === "bn" ? "bn-BD" : "en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+      }),
+    [locale]
+  );
 
   if (locationLoading) {
-    return <LoadingSpinner />;
+    return (
+      <div className="min-h-[400px] flex items-center justify-center">
+        <LoadingSpinner />
+      </div>
+    );
   }
 
   return (
-    <section className="max-w-4xl mx-auto">
-      <div className="bg-white rounded-2xl shadow-lg p-6">
-        {/* Calculation Method Selector */}
-        <div className="mb-6 p-4 bg-gray-50 rounded-lg">
-          <h3 className="font-semibold mb-3">
-            {locale === "bn" ? "গণনা পদ্ধতি" : "Calculation Method"}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium mb-2">
-                {locale === "bn" ? "প্রধান পদ্ধতি" : "Main Method"}
-              </label>
-              <select
-                value={calculationMethod}
-                onChange={(e) =>
-                  setCalculationMethod(e.target.value as CalculationMethod)
-                }
-                className="w-full p-2 border border-gray-300 rounded-md"
-              >
-                <option value="BD-DS">
-                  {locale === "bn"
-                    ? "বাংলাদেশ ইসলামিক ফাউন্ডেশন"
-                    : "Bangladesh Islamic Foundation"}
-                </option>
-                <option value="BD-UA">
-                  {locale === "bn"
-                    ? "ইসলামিক ইউনিভার্সিটি, করাচি"
-                    : "Islamic University, Karachi"}
-                </option>
-                <option value="MWL">
-                  {locale === "bn"
-                    ? "মুসলিম ওয়ার্ল্ড লীগ"
-                    : "Muslim World League"}
-                </option>
-                <option value="Karachi">
-                  {locale === "bn"
-                    ? "করাচি বিশ্ববিদ্যালয়"
-                    : "University of Karachi"}
-                </option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">
-                {locale === "bn" ? "আসর পদ্ধতি" : "Asr Method"}
-              </label>
-              <select
-                value={asrMethod}
-                onChange={(e) =>
-                  setAsrMethod(e.target.value as "Standard" | "Hanafi")
-                }
-                className="w-full p-2 border border-gray-300 rounded-md"
-              >
-                <option value="Standard">
-                  {locale === "bn" ? "শাফেয়ী/হাম্বলী" : "Shafi'i/Hanbali"}
-                </option>
-                <option value="Hanafi">
-                  {locale === "bn" ? "হানাফী" : "Hanafi"}
-                </option>
-              </select>
-            </div>
-          </div>
-        </div>
+    <>
+      {/* SEO Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            name: locale === "bn" ? "প্রার্থনার সময়" : "Prayer Times",
+            description:
+              locale === "bn"
+                ? "সঠিক প্রার্থনার সময় এবং ইসলামিক ক্যালেন্ডার"
+                : "Accurate prayer times and Islamic calendar",
+            applicationCategory: "ReligiousApplication",
+            operatingSystem: "All",
+            permissions: "geolocation",
+          }),
+        }}
+      />
 
-        {/* Prayer Times Display */}
-        {prayerLoading ? (
-          <div className="grid gap-4">
-            {[...Array(6)].map((_, i) => (
-              <div key={i} className="skeleton h-20 rounded-lg"></div>
-            ))}
-          </div>
-        ) : error ? (
-          <div className="text-center py-8 text-red-600">
-            <p>{error}</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="mt-4 px-4 py-2 bg-islamic-green text-white rounded-lg"
+      <section
+        className="max-w-4xl mx-auto w-full"
+        role="main"
+        aria-label={locale === "bn" ? "প্রার্থনার সময়" : "Prayer Times"}
+      >
+        <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
+          {/* Calculation Method Selector */}
+          <section
+            className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200"
+            aria-labelledby="calculation-method-heading"
+          >
+            <h2
+              id="calculation-method-heading"
+              className="font-semibold mb-3 text-lg sm:text-xl text-gray-800"
             >
-              {locale === "bn" ? "পুনরায় চেষ্টা করুন" : "Try Again"}
-            </button>
-          </div>
-        ) : (
-          <div className="grid gap-3 md:gap-4">
-            {prayerTimes?.map((prayer, index) => (
-              <PrayerCard
-                key={prayer.name}
-                prayer={prayer}
-                // locale={locale}
-                locale={validateLocale(locale)}
-                isCurrent={prayer.isCurrent}
-                isNext={prayer.isNext}
-                isPassed={prayer.isPassed}
-                index={index}
-              />
-            ))}
-          </div>
-        )}
+              {locale === "bn" ? "গণনা পদ্ধতি" : "Calculation Method"}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
+              <div className="space-y-2">
+                <label
+                  htmlFor="main-method-select"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  {locale === "bn" ? "প্রধান পদ্ধতি" : "Main Method"}
+                </label>
+                <select
+                  id="main-method-select"
+                  value={calculationMethod}
+                  onChange={handleCalculationMethodChange}
+                  className="w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-islamic-green focus:border-transparent transition-all duration-200 text-sm sm:text-base"
+                  aria-describedby="main-method-description"
+                >
+                  {calculationMethodOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {locale === "bn" ? option.bn : option.en}
+                    </option>
+                  ))}
+                </select>
+                <p
+                  id="main-method-description"
+                  className="text-xs text-gray-500"
+                >
+                  {locale === "bn"
+                    ? "প্রার্থনার সময় গণনার পদ্ধতি নির্বাচন করুন"
+                    : "Select calculation method for prayer times"}
+                </p>
+              </div>
 
-        {/* Last Updated & Location Info */}
-        <div className="mt-6 text-center text-sm text-gray-500">
-          <p>
-            {locale === "bn" ? "সর্বশেষ আপডেট" : "Last updated"}:{" "}
-            {new Date().toLocaleTimeString(locale === "bn" ? "bn-BD" : "en-US")}
-          </p>
-          {location && (
-            <p className="mt-1">
-              {locale === "bn" ? "অবস্থান" : "Location"}: {location.city},{" "}
-              {location.country}
-            </p>
-          )}
+              <div className="space-y-2">
+                <label
+                  htmlFor="asr-method-select"
+                  className="block text-sm font-medium text-gray-700"
+                >
+                  {locale === "bn" ? "আসর পদ্ধতি" : "Asr Method"}
+                </label>
+                <select
+                  id="asr-method-select"
+                  value={asrMethod}
+                  onChange={handleAsrMethodChange}
+                  className="w-full p-2 sm:p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-islamic-green focus:border-transparent transition-all duration-200 text-sm sm:text-base"
+                  aria-describedby="asr-method-description"
+                >
+                  {asrMethodOptions.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {locale === "bn" ? option.bn : option.en}
+                    </option>
+                  ))}
+                </select>
+                <p
+                  id="asr-method-description"
+                  className="text-xs text-gray-500"
+                >
+                  {locale === "bn"
+                    ? "আসর নামাজের সময় গণনার পদ্ধতি"
+                    : "Method for calculating Asr prayer time"}
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Prayer Times Display */}
+          <section aria-labelledby="prayer-times-heading" className="mb-6">
+            <h2 id="prayer-times-heading" className="sr-only">
+              {locale === "bn"
+                ? "প্রার্থনার সময়সূচী"
+                : "Prayer Times Schedule"}
+            </h2>
+
+            {prayerLoading ? (
+              <div
+                className="grid gap-3 sm:gap-4"
+                role="status"
+                aria-label={locale === "bn" ? "লোড হচ্ছে" : "Loading"}
+              >
+                {[...Array(6)].map((_, i) => (
+                  <div
+                    key={i}
+                    className="skeleton h-16 sm:h-20 rounded-lg animate-pulse"
+                    aria-hidden="true"
+                  />
+                ))}
+              </div>
+            ) : error ? (
+              <div
+                className="text-center py-6 sm:py-8"
+                role="alert"
+                aria-live="polite"
+              >
+                <div className="max-w-md mx-auto">
+                  <svg
+                    className="w-12 h-12 text-red-500 mx-auto mb-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"
+                    />
+                  </svg>
+                  <p className="text-red-600 text-base sm:text-lg mb-4">
+                    {error}
+                  </p>
+                  <button
+                    onClick={handleRetry}
+                    className="mt-4 px-6 py-3 bg-islamic-green text-white rounded-lg hover:bg-green-700 focus:ring-2 focus:ring-green-500 focus:ring-offset-2 transition-colors duration-200 text-sm sm:text-base font-medium"
+                  >
+                    {locale === "bn" ? "পুনরায় চেষ্টা করুন" : "Try Again"}
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div
+                className="grid gap-3 sm:gap-4"
+                role="list"
+                aria-label={
+                  locale === "bn" ? "প্রার্থনার তালিকা" : "Prayer list"
+                }
+              >
+                {prayerTimes?.map((prayer, index) => (
+                  <PrayerCard
+                    key={prayer.name}
+                    prayer={prayer}
+                    locale={validateLocale(locale)}
+                    isCurrent={prayer.isCurrent}
+                    isNext={prayer.isNext}
+                    isPassed={prayer.isPassed}
+                    index={index}
+                  />
+                ))}
+              </div>
+            )}
+          </section>
+
+          {/* Last Updated & Location Info */}
+          <footer className="mt-6 pt-6 border-t border-gray-200">
+            <div className="text-center text-sm text-gray-600 space-y-2">
+              <p>
+                <span className="font-medium">
+                  {locale === "bn" ? "সর্বশেষ আপডেট" : "Last updated"}:
+                </span>{" "}
+                <time dateTime={new Date().toISOString()}>
+                  {lastUpdatedTime}
+                </time>
+              </p>
+              {location && (
+                <p>
+                  <span className="font-medium">
+                    {locale === "bn" ? "অবস্থান" : "Location"}:
+                  </span>{" "}
+                  <span className="text-gray-700">
+                    {location.city}, {location.country}
+                  </span>
+                </p>
+              )}
+            </div>
+          </footer>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }
