@@ -40,7 +40,6 @@ export default function HomePage() {
 
       {/* Main Prayer Times */}
       <div className="flex justify-center items-center">
-        {" "}
         <PrayerTimes />
       </div>
 

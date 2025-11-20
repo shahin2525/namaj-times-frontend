@@ -16,7 +16,13 @@
     "isha": "Isha",
     "current": "Current",
     "next": "Next",
-    "passed": "Passed"
+    "passed": "Passed",
+    "sehriEnds": "Sehri Ends",
+    "iftarStarts": "Iftar Starts",
+    "fastingInProgress": "Fasting in progress",
+    "notFastingTime": "Not fasting time",
+    "untilFajr": "Until Fajr",
+    "atMaghribTime": "At Maghrib time"
   },
   "Navigation": {
     "home": "Home",

@@ -16,7 +16,13 @@
     "isha": "ইশা",
     "current": "বর্তমান",
     "next": "পরবর্তী",
-    "passed": "সমাপ্ত"
+    "passed": "সমাপ্ত",
+    "sehriEnds": "সেহরি শেষ",
+    "iftarStarts": "ইফতার শুরু",
+    "fastingInProgress": "রোজা চলমান",
+    "notFastingTime": "রোজা নেই",
+    "untilFajr": "ফজরের আগ পর্যন্ত",
+    "atMaghribTime": "মাগরিবের সময়"
   },
   "Navigation": {
     "home": "হোম",
