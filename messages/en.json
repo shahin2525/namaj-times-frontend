@@ -56,5 +56,39 @@
     "locationAccessDenied": "Location access denied. Please allow location access or enter manually.",
     "unknownCity": "Unknown City",
     "unknownCountry": "Unknown Country"
+  },
+  "Forbidden": {
+    "title": "Forbidden Prayer Times",
+    "note": "These times are when voluntary prayers are forbidden. Missed obligatory prayers can be made up at any time.",
+    "period": "Period",
+    "duration": "Duration",
+    "reason": "Reason",
+    "items": [
+      {
+        "period": "After Fajr Prayer",
+        "duration": "Until Sunrise",
+        "reason": "Makruh time"
+      },
+      {
+        "period": "During Sunrise",
+        "duration": "20 minutes after sunrise",
+        "reason": "Sun worship time"
+      },
+      {
+        "period": "At Zenith",
+        "duration": "15–20 minutes before Dhuhr",
+        "reason": "Extreme heat time"
+      },
+      {
+        "period": "After Asr Prayer",
+        "duration": "Until Sunset",
+        "reason": "Makruh time"
+      },
+      {
+        "period": "During Sunset",
+        "duration": "20 minutes around sunset",
+        "reason": "Sun worship time"
+      }
+    ]
   }
 }

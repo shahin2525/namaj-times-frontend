@@ -39,7 +39,7 @@ export default function HomePage() {
       <HijriDate />
 
       {/* Main Prayer Times */}
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center my-5 py-5">
         <PrayerTimes />
       </div>
 
@@ -47,7 +47,9 @@ export default function HomePage() {
       <AdSense slot="middle-banner" />
 
       {/* Forbidden Times */}
-      <ForbiddenTimes />
+      <div className="flex justify-center my-5 py-5">
+        <ForbiddenTimes />
+      </div>
 
       {/* AdSense Bottom */}
       <AdSense slot="bottom-banner" />

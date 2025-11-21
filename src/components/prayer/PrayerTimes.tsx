@@ -310,7 +310,7 @@
 "use client";
 import { useState, useMemo, useCallback } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { usePrayerTimes, CalculationMethod } from "@/hooks/usePrayerTimes";
+import { usePrayerTimes, CalculationMethodType } from "@/hooks/usePrayerTimes";
 import { useLocation } from "@/hooks/useLocation";
 import PrayerCard from "./PrayerCard";
 import FastingTimes from "./FastingTimes";
@@ -321,7 +321,7 @@ export default function PrayerTimes() {
   const locale = useLocale();
   const { location, isLoading: locationLoading } = useLocation();
   const [calculationMethod, setCalculationMethod] =
-    useState<CalculationMethod>("BD-DS");
+    useState<CalculationMethodType>("BD-DS");
   const [asrMethod, setAsrMethod] = useState<"Standard" | "Hanafi">("Standard");
 
   // Memoized prayer times configuration
@@ -377,7 +377,7 @@ export default function PrayerTimes() {
   // Optimized event handlers
   const handleCalculationMethodChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
-      setCalculationMethod(e.target.value as CalculationMethod);
+      setCalculationMethod(e.target.value as CalculationMethodType);
     },
     []
   );
@@ -434,7 +434,7 @@ export default function PrayerTimes() {
       />
 
       <section
-        className="max-w-4xl mx-auto w-full"
+        className="max-w-4xl mx-auto w-full pt-5"
         role="main"
         aria-label={locale === "bn" ? "প্রার্থনার সময়" : "Prayer Times"}
       >
@@ -444,7 +444,14 @@ export default function PrayerTimes() {
         )}
 
         <div className="bg-white rounded-2xl shadow-lg p-4 sm:p-6 lg:p-8">
+          {/* Prayer Times Heading */}
+          <h1 className="text-2xl sm:text-3xl font-bold text-center mb-6 text-gray-800 pt-5 pb-5">
+            {locale === "bn"
+              ? "আজকের নামাজের সময়সূচী"
+              : "Today’s Prayer Times"}
+          </h1>
           {/* Calculation Method Selector */}
+
           <section
             className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200"
             aria-labelledby="calculation-method-heading"

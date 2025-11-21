@@ -112,7 +112,7 @@ export default function FastingTimes({
 
   return (
     <section
-      className="max-w-4xl mx-auto mb-8"
+      className="max-w-4xl mx-auto mb-8 pt-4"
       aria-labelledby="fasting-times-heading"
     >
       <div className="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl shadow-lg p-6 text-white">
