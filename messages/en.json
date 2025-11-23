@@ -97,37 +97,15 @@
     "loading": "Calculating Qibla direction...",
     "error": "Unable to determine Qibla direction",
     "retry": "Try Again",
-    "locationAccess": "Location access required",
     "locationError": "Please enable location services to find Qibla direction",
-    "compassError": "Compass not supported",
-    "compassHelp": "Please allow compass access when prompted",
+    "compassError": "Compass not supported or permission denied",
+    "enableCompass": "Enable Compass",
+    "compassHelp": "Tap the button below to enable compass",
     "direction": "Qibla Direction",
     "degrees": "degrees from North",
     "facingQibla": "You are facing Qibla",
     "turnLeft": "Turn left",
     "turnRight": "Turn right",
-    "adjust": "Adjust your direction",
-    "kaabaDistance": "Distance to Kaaba",
-    "km": "km",
-    "method": "Calculation Method",
-    "accuracy": "Accuracy",
-    "high": "High",
-    "medium": "Medium",
-    "low": "Low",
-    "instructions": {
-      "title": "How to Use",
-      "step1": "Allow location access when prompted",
-      "step2": "Hold your device flat and parallel to the ground",
-      "step3": "Rotate slowly until the arrow points straight up",
-      "step4": "The red arrow always points towards Mecca"
-    },
-    "tips": {
-      "title": "Tips for Accurate Direction",
-      "tip1": "Hold device away from magnetic objects",
-      "tip2": "Calibrate compass by moving device in figure-8 motion",
-      "tip3": "Use in open areas away from buildings",
-      "tip4": "Check multiple times for consistency"
-    },
-    "ads": "Advertisement"
+    "adjust": "Adjust your direction"
   }
 }
