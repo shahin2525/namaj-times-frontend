@@ -29,12 +29,12 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div className="min-h-screen bg-gradient-to-b from-islamic-cream to-white flex flex-col">
-        <Header locale={locale} />
-        <div className="h-7"></div> {/* This adds fixed 32px space */}
-        <main className="flex-1 container-responsive py-8">{children}</main>
-        <Footer />
-      </div>
+      {/* <div className="min-h-screen bg-gradient-to-b from-islamic-cream to-white flex flex-col"> */}
+      <Header locale={locale} />
+      <div className="h-7"></div> {/* This adds fixed 32px space */}
+      <main className="min-h-screen">{children}</main>
+      <Footer />
+      {/* </div> */}
     </NextIntlClientProvider>
   );
 }

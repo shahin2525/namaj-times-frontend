@@ -107,5 +107,28 @@
     "turnLeft": "Turn left",
     "turnRight": "Turn right",
     "adjust": "Adjust your direction"
+  },
+  "Calendar": {
+    "title": "Islamic Monthly Calendar",
+    "today": "Today",
+    "previousMonth": "Previous month",
+    "nextMonth": "Next month",
+    "selectedDate": "Selected Date",
+    "gregorian": "Gregorian",
+    "hijri": "Hijri",
+    "prayerTimes": "Prayer Times",
+    "prayerTimesUnavailable": "Prayer times unavailable",
+    "islamicMonths": "Islamic Months",
+    "fajr": "fajr",
+    "sunrise": "sunrise",
+    "dhuhr": "dhuhr",
+    "asr": "asr",
+    "maghrib": "maghrib",
+    "isha": "isha",
+    "meta": {
+      "title": "Islamic Calendar - Monthly Hijri Dates & Prayer Times",
+      "description": "Complete Islamic monthly calendar with Hijri dates, prayer times, and Islamic months. Stay connected with the Islamic calendar and prayer schedules.",
+      "keywords": "islamic calendar, hijri calendar, prayer times, muslim calendar, islamic dates, monthly calendar"
+    }
   }
 }

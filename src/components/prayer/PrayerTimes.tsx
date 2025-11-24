@@ -315,7 +315,7 @@ import { useLocation } from "@/hooks/useLocation";
 import PrayerCard from "./PrayerCard";
 import FastingTimes from "./FastingTimes";
 import LoadingSpinner from "../ui/LoadingSpinner";
-import { validateLocale } from "@/lib/utils";
+import { validateLocale } from "@/utils/locale";
 
 export default function PrayerTimes() {
   const locale = useLocale();

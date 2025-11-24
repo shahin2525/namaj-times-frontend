@@ -13,7 +13,10 @@ export default function Page() {
         <title>{t("title")}</title>
       </Head>
 
-      <QiblaDirection />
+      <div className="flex justify-center items-center">
+        {" "}
+        <QiblaDirection />
+      </div>
     </div>
   );
 }
