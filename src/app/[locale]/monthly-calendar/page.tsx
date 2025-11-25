@@ -35,7 +35,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 const MonthlyCalendarPage = () => {
-  return <IslamicCalendar />;
+  return (
+    <div className="flex justify-center items-center">
+      <IslamicCalendar />
+    </div>
+  );
 };
 
 export default MonthlyCalendarPage;

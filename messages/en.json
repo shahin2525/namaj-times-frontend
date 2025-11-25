@@ -130,5 +130,22 @@
       "description": "Complete Islamic monthly calendar with Hijri dates, prayer times, and Islamic months. Stay connected with the Islamic calendar and prayer schedules.",
       "keywords": "islamic calendar, hijri calendar, prayer times, muslim calendar, islamic dates, monthly calendar"
     }
+  },
+  "Forbidden": {
+    "title": "Forbidden Prayer Times",
+    "forbidden": {
+      "sunrise": {
+        "title": "Sunrise",
+        "desc": "Prayer is forbidden during the moment of sunrise."
+      },
+      "zawal": {
+        "title": "Zawal (Solar Noon)",
+        "desc": "Prayer is not allowed when the sun is at its highest point."
+      },
+      "sunset": {
+        "title": "Sunset",
+        "desc": "Prayer is forbidden exactly at the moment of sunset."
+      }
+    }
   }
 }
