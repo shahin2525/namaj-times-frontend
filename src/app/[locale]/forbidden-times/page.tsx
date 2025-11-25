@@ -49,14 +49,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import useLocation from "@/hooks/useLocation2";
+import useLocation2 from "@/hooks/useLocation2";
 import { Coordinates, CalculationMethod, PrayerTimes } from "adhan";
 import { getForbiddenTimes } from "@/lib/getForbiddenTimes";
 import ForbiddenTimeList from "@/components/forbidden/ForbiddenTimeList";
 
 export default function ForbiddenTimePage() {
-  const t = useTranslations("Forbidden");
-  const location = useLocation();
+  const t = useTranslations("Forbidden2");
+  const location = useLocation2();
 
   if (!location) {
     return (
