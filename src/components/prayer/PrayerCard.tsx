@@ -274,7 +274,14 @@ export default function PrayerCard({
           }
         `}
         >
-          {prayer.time}
+          {/* {prayer.time} */}
+          {prayer.time} - {prayer.endTime}
+          {isCurrent && (
+            <p className="text-green-600 font-semibold text-sm mt-1">
+              {locale === "bn" ? "সময় বাকি" : "Time Remaining"}:
+              {prayer.remaining}
+            </p>
+          )}
         </div>
       </div>
 
