@@ -16,7 +16,7 @@ export const calculatePrayerTimes = (
 };
 
 // Forbidden times based on sunrise and sunset
-export const getForbiddenTimes = (sunrise: string, sunset: string) => {
+export const getForbiddenTimes2 = (sunrise: string, sunset: string) => {
   return {
     afterFajr: "From Fajr until sunrise",
     atSunrise: "20 minutes around sunrise",

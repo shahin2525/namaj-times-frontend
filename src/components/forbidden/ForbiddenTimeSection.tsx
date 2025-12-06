@@ -1,20 +1,16 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-// import useLocation from "@/hooks/useLocation";
 import { Coordinates, CalculationMethod, PrayerTimes } from "adhan";
 import { getForbiddenTimes } from "@/lib/getForbiddenTimes";
 import ForbiddenTimeList from "@/components/forbidden/ForbiddenTimeList";
-import { useEffect } from "react";
-// import { useLocation3 } from "@/hooks/useLocation3";
 import { useLocation } from "@/hooks/useLocation";
+import { useEffect } from "react";
 
-export default function ForbiddenTimeContent() {
+export default function ForbiddenTimeSection() {
   const t = useTranslations("Forbidden2");
   const locale = useLocale();
-
   const { location, isLoading } = useLocation();
-
   // 🔥 Dynamic SEO based on city + language
   useEffect(() => {
     if (!location?.city) return;
@@ -72,17 +68,12 @@ export default function ForbiddenTimeContent() {
     ogDesc.setAttribute("content", desc);
   }, [location?.city, locale]);
 
-  // Loading
   if (isLoading) {
-    return (
-      <p className="text-center text-gray-600 dark:text-gray-300">
-        Detecting your location...
-      </p>
-    );
+    return <p className="text-center text-gray-500">Detecting location…</p>;
   }
 
   if (!location) {
-    return <p className="text-center text-red-500">Failed to load location.</p>;
+    return <p className="text-center text-red-500">Failed to load location</p>;
   }
 
   const coords = new Coordinates(location.latitude, location.longitude);
@@ -110,25 +101,18 @@ export default function ForbiddenTimeContent() {
   ];
 
   return (
-    <main className="min-h-screen flex items-center justify-center px-4 py-6">
-      <div className="w-full max-w-2xl">
-        <h1 className="text-2xl font-bold text-center mb-6">
-          {locale === "bn"
-            ? location.city
-              ? `নিষিদ্ধ নামাজের সময় - ${location.city}`
-              : "নিষিদ্ধ নামাজের সময়"
-            : location.city
-            ? `Forbidden Prayer Times in ${location.city}`
-            : "Forbidden Prayer Times"}
-        </h1>
+    <div className="w-full max-w-xl mx-auto">
+      <h1 className="text-xl md:text-2xl font-bold text-center mb-6">
+        {locale === "bn"
+          ? location.city
+            ? `নিষিদ্ধ নামাজের সময় - ${location.city}`
+            : "নিষিদ্ধ নামাজের সময়"
+          : location.city
+          ? `Forbidden Prayer Times in ${location.city}`
+          : "Forbidden Prayer Times"}
+      </h1>
 
-        {/* Google AdSense */}
-        <div className="w-full h-24 bg-gray-100 dark:bg-gray-800 rounded-xl flex items-center justify-center text-gray-500 mb-6 border border-dashed">
-          Google AdSense
-        </div>
-
-        <ForbiddenTimeList list={forbiddenTimes} />
-      </div>
-    </main>
+      <ForbiddenTimeList list={forbiddenTimes} />
+    </div>
   );
 }

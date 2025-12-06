@@ -1,0 +1,22 @@
+{
+  "PrayerTimes": {
+    "todayPrayer": "आज की नमाज़ के समय",
+    "calculationMethod": "गणना विधि",
+    "asrMethod": "असर विधि",
+    "fajr": "फ़ज्र",
+    "sunrise": "सूर्योदय",
+    "dhuhr": "ज़ुहर",
+    "asr": "असर",
+    "maghrib": "मगरिब",
+    "isha": "ईशा",
+    "loading": "नमाज़ का समय लोड हो रहा है...",
+    "failed": "नमाज़ के समय लोड नहीं हो पाए, बाद में प्रयास करें"
+  },
+
+  "Navigation": {
+    "prayerTimes": "नमाज का समय",
+    "monthlyCalendar": "मासिक कैलेंडर",
+    "forbiddenTimes": "निषिद्ध समय",
+    "qiblaDirection": "किबला दिशा"
+  }
+}

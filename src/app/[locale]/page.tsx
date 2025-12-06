@@ -5,6 +5,7 @@ import PrayerTimes from "@/components/prayer/PrayerTimes";
 import HijriDate from "@/components/prayer/HijriDate";
 import ForbiddenTimes from "@/components/prayer/ForbiddenTimes";
 import AdSense from "@/components/ui/AdSense";
+import ForbiddenTimeSection from "@/components/forbidden/ForbiddenTimeSection";
 
 export default function HomePage() {
   const t = useTranslations("Home");
@@ -21,15 +22,6 @@ export default function HomePage() {
           <p className="text-xl text-gray-600 max-w-2xl">{t("subtitle")}</p>
         </div>
       </section>
-      {/* // code 2 */}
-      {/* <section className="text-center py-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-islamic-green mb-4">
-          {t("title")}
-        </h1>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto w-full">
-          {t("subtitle")}
-        </p>
-      </section> */}
 
       {/* AdSense Top */}
       <AdSense slot="top-banner" />
@@ -47,8 +39,8 @@ export default function HomePage() {
       <AdSense slot="middle-banner" />
 
       {/* Forbidden Times */}
-      <div className="flex justify-center my-5 py-5">
-        <ForbiddenTimes />
+      <div className="flex justify-center">
+        <ForbiddenTimeSection />
       </div>
 
       {/* AdSense Bottom */}

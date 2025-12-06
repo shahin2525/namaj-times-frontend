@@ -7,6 +7,10 @@
     "monthlyCalendar": "Monthly Calendar",
     "qiblaDirection": "Qibla Direction"
   },
+  "Meta": {
+    "title": "Islamic Prayer Times - Accurate Salah Times",
+    "desc": "Get accurate prayer times, forbidden prayer times, and Islamic calendar based on your location."
+  },
   "Prayer": {
     "fajr": "Fajr",
     "sunrise": "Sunrise",
@@ -23,6 +27,30 @@
     "notFastingTime": "Not fasting time",
     "untilFajr": "Until Fajr",
     "atMaghribTime": "At Maghrib time"
+  },
+
+  "PrayerTimes": {
+    "title": "Today’s Prayer Times",
+    "retry": "Try Again",
+    "lastUpdated": "Last updated",
+    "location": "Location",
+    "seo": {
+      "name": "Prayer Times",
+      "description": "Accurate prayer times and Islamic calendar"
+    },
+    "calcMethod": {
+      "heading": "Calculation Method",
+      "main": "Main Method",
+      "bd_ds": "Bangladesh Islamic Foundation",
+      "bd_ua": "Islamic University, Karachi",
+      "mwl": "Muslim World League",
+      "karachi": "University of Karachi"
+    },
+    "asrMethods": {
+      "heading": "Asr Method",
+      "standard": "Shafi'i / Hanbali",
+      "hanafi": "Hanafi"
+    }
   },
   "Navigation": {
     "home": "Home",
@@ -58,36 +86,36 @@
     "unknownCountry": "Unknown Country"
   },
   "Forbidden": {
-    "title": "Forbidden Prayer Times",
-    "note": "These times are when voluntary prayers are forbidden. Missed obligatory prayers can be made up at any time.",
-    "period": "Period",
+    "title": "Forbidden Times for Prayer",
+    "note": "Voluntary (Nafl) prayers are prohibited during these times. However, missed (Qada) prayers can be performed at any time.",
+    "period": "Time Period",
     "duration": "Duration",
     "reason": "Reason",
     "items": [
       {
-        "period": "After Fajr Prayer",
-        "duration": "Until Sunrise",
-        "reason": "Makruh time"
+        "period": "After Fajr prayer",
+        "duration": "Until sunrise",
+        "reason": "Makruh (disliked) time"
       },
       {
-        "period": "During Sunrise",
+        "period": "At the time of sunrise",
         "duration": "20 minutes after sunrise",
-        "reason": "Sun worship time"
+        "reason": "Time of sun worship (by disbelievers)"
       },
       {
-        "period": "At Zenith",
-        "duration": "15–20 minutes before Dhuhr",
-        "reason": "Extreme heat time"
+        "period": "Zenith (when the sun is at its peak)",
+        "duration": "15–20 minutes before Zuhr prayer",
+        "reason": "Time of intense heat / sun at meridian"
       },
       {
-        "period": "After Asr Prayer",
-        "duration": "Until Sunset",
-        "reason": "Makruh time"
+        "period": "After Asr prayer",
+        "duration": "Until sunset",
+        "reason": "Makruh (disliked) time"
       },
       {
-        "period": "During Sunset",
-        "duration": "20 minutes around sunset",
-        "reason": "Sun worship time"
+        "period": "At the time of sunset",
+        "duration": "Approximately 20 minutes around sunset",
+        "reason": "Time of sun worship (by disbelievers)"
       }
     ]
   },

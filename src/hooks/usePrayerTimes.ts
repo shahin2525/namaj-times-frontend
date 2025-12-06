@@ -228,7 +228,7 @@ export type CalculationMethodType =
 
 interface UsePrayerTimesProps {
   location: Location | null;
-  locale: "en" | "bn";
+  locale: "en" | "bn"|"hi";
   method?: CalculationMethodType;
   asrMethod?: "Standard" | "Hanafi";
   adjustment?: { [key: string]: number };

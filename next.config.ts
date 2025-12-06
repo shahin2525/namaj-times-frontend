@@ -1,69 +1,6 @@
-// import type { NextConfig } from "next";
+//2
 
-// const nextConfig: NextConfig = {
-//   /* config options here */
-//   reactCompiler: true,
-//   i18n: {
-//     locales: ["en", "bn"],
-//     defaultLocale: "en",
-//     localeDetection: false,
-//   },
-// };
-
-// export default nextConfig;
-
-// next.config.js
-// const withNextIntl = require("next-intl/plugin")();
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   experimental: {
-//     appDir: true,
-//   },
-//   compress: true,
-//   poweredByHeader: false,
-//   images: {
-//     domains: ["localhost"],
-//   },
-//   async headers() {
-//     return [
-//       {
-//         source: "/(.*)",
-//         headers: [
-//           {
-//             key: "X-Frame-Options",
-//             value: "DENY",
-//           },
-//           {
-//             key: "X-Content-Type-Options",
-//             value: "nosniff",
-//           },
-//         ],
-//       },
-//     ];
-//   },
-// };
-
-// module.exports = withNextIntl(nextConfig);
-// next.config.js
-// const withNextIntl = require("next-intl/plugin")();
-
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {
-//   experimental: {
-//     appDir: true,
-//   },
-//   i18n: {
-//     locales: ["en", "bn"],
-//     defaultLocale: "en",
-//   },
-//   compress: true,
-//   poweredByHeader: false,
-// };
-
-// module.exports = withNextIntl(nextConfig);
-// next.config.js
-// const withNextIntl = require("next-intl/plugin")("./i18n.ts"); // ← Point to i18n.ts
+// const withNextIntl = require("next-intl/plugin")("./src/i18n/request.ts");
 
 // /** @type {import('next').NextConfig} */
 // const nextConfig = {
@@ -78,20 +15,48 @@
 // };
 
 // module.exports = withNextIntl(nextConfig);
-//
-// next.config.js
-const withNextIntl = require("next-intl/plugin")("./src/i18n/request.ts");
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
-  compress: true,
-  poweredByHeader: false,
-  images: {
-    domains: ["localhost"],
-  },
+//3
+
+import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
+
+// 1. Wrap with the next-intl plugin
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
+
+// 2. Your Next.js config
+const nextConfig: NextConfig = {
+  reactStrictMode: true,
+
+  // For Next.js 16 / new proxy.ts behavior (if needed)
+  // experimental: {
+  //   proxyTimeout: 60000
+  // },
+
+  // Locales used in your app
+  // i18n: {
+  //   locales: ["en", "bn", "hi"],
+  //   defaultLocale: "en",
+  //   localeDetection: false,
+  // },
 };
 
-module.exports = withNextIntl(nextConfig);
+// 3. Export wrapped config
+export default withNextIntl(nextConfig);
+//
+//4
+// const withNextIntl = require("next-intl/plugin")("./src/i18n/request.ts");
+
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   experimental: {
+//     appDir: true,
+//   },
+//   compress: true,
+//   poweredByHeader: false,
+//   images: {
+//     domains: ["localhost"],
+//   },
+// };
+
+// module.exports = withNextIntl(nextConfig);
