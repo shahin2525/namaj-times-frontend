@@ -120,7 +120,8 @@
     ]
   },
   "Qibla": {
-    "title": "Qibla Direction Finder",
+    "title": " Qibla Direction Finder",
+    "description": "Find Kaaba direction for Muslims living in ",
     "subtitle": "Find the direction to Kaaba in Mecca from your current location",
     "loading": "Calculating Qibla direction...",
     "error": "Unable to determine Qibla direction",
