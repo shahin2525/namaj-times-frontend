@@ -16,6 +16,7 @@ import {
 } from "adhan";
 
 export interface PrayerTime {
+  key: string;
   name: string;
   nameBn: string;
   time: string;
@@ -132,7 +133,7 @@ export function usePrayerTimes({
         //   },
         //   { name: "Isha", nameBn: "ইশা", start: adhan.isha, rule: "MIDNIGHT" },
         // ];
-        const sunset = adhan.maghrib; // sunset = maghrib time
+        const sunset = new Date(adhan.maghrib.getTime() - 1 * 60000); // sunset = maghrib time
 
         // Ishraq = 20 min after sunrise
         const ishraq = new Date(adhan.sunrise.getTime() + 20 * 60000);
@@ -141,98 +142,134 @@ export function usePrayerTimes({
         const duha = new Date(
           (adhan.sunrise.getTime() + adhan.dhuhr.getTime()) / 2
         );
+        const maghribStart = adhan.maghrib;
+        const ishaStart = adhan.isha;
 
+        // Awabin window = same as maghrib → isha
+        const awabinStart = maghribStart;
+        const awabinEnd = ishaStart;
         const list = [
-          // Tahajjud
           {
+            key: "tahajjud",
             name: "Tahajjud",
             nameBn: "তাহাজ্জুদ",
             start: sunnah.lastThirdOfTheNight,
-            rule: "FAJR",
+            rule: "NEXT",
           },
-
-          // Fajr
-          { name: "Fajr", nameBn: "ফজর", start: adhan.fajr, rule: "SUNRISE" },
-
-          // Sunrise
           {
+            key: "fajr",
+            name: "Fajr",
+            nameBn: "ফজর",
+            start: adhan.fajr,
+            rule: "SUNRISE",
+          },
+          {
+            key: "sunrise",
             name: "Sunrise",
             nameBn: "সূর্যোদয়",
             start: adhan.sunrise,
-            rule: "NONE",
+            rule: "NEXT",
           },
-
-          // Ishraq
           {
+            key: "ishraq",
             name: "Ishraq",
             nameBn: "ইশরাক",
             start: ishraq,
             rule: "NEXT",
           },
-
-          // Duha (Chasht)
           {
+            key: "chast",
             name: "Chasht",
             nameBn: "চাশত",
             start: duha,
             rule: "NEXT",
           },
-
-          // Dhuhr
-          { name: "Dhuhr", nameBn: "জোহর", start: adhan.dhuhr, rule: "NEXT" },
-
-          // Asr
-          { name: "Asr", nameBn: "আসর", start: adhan.asr, rule: "SUNSET" },
-
-          // Sunset → actual maghrib
           {
+            key: "dhuhr",
+            name: "Dhuhr",
+            nameBn: "জোহর",
+            start: adhan.dhuhr,
+            rule: "NEXT",
+          },
+          {
+            key: "asr",
+            name: "Asr",
+            nameBn: "আসর",
+            start: adhan.asr,
+            rule: "SUNSET",
+          },
+          {
+            key: "sunset",
             name: "Sunset",
             nameBn: "সূর্যাস্ত",
             start: sunset,
             rule: "NEXT",
           },
-
-          // Maghrib
           {
+            key: "maghrib",
             name: "Maghrib",
             nameBn: "মাগরিব",
             start: adhan.maghrib,
-            rule: "AWABIN",
+            rule: "Isha",
           },
-
-          // Awabin
           {
-            name: "Awabin",
+            key: "awabin",
+            name: "Awwabin",
             nameBn: "আওয়াবিন",
             start: adhan.maghrib,
-            rule: "ISHA",
+            rule: "Isha",
           },
-
-          // Isha
           {
+            key: "isha",
             name: "Isha",
             nameBn: "ইশা",
             start: adhan.isha,
             rule: "MIDNIGHT",
           },
         ];
+
         const formatted: PrayerTime[] = list.map((p, i) => {
           let endDate: Date;
 
+          // switch (p.rule) {
+          //   case "SUNRISE":
+          //     endDate = adhan.sunrise;
+          //     break;
+          //   case "SUNSET":
+          //     endDate = adhan.maghrib;
+          //     break;
+          //   case "MIDNIGHT":
+          //     endDate = sunnah.middleOfTheNight;
+          //     break;
+          //   case "NEXT":
+          //     endDate =
+          //       list[i + 1]?.start ?? new Date(p.start.getTime() + 7200000);
+          //     break;
+          //   default:
+          //     endDate = new Date(p.start.getTime() + 7200000);
+          // }
           switch (p.rule) {
             case "SUNRISE":
               endDate = adhan.sunrise;
               break;
+
             case "SUNSET":
               endDate = adhan.maghrib;
               break;
+
             case "MIDNIGHT":
               endDate = sunnah.middleOfTheNight;
               break;
+
+            case "Isha": // 👈 ADD THIS
+              endDate = adhan.isha;
+              break;
+
             case "NEXT":
               endDate =
                 list[i + 1]?.start ?? new Date(p.start.getTime() + 7200000);
               break;
+
             default:
               endDate = new Date(p.start.getTime() + 7200000);
           }
@@ -249,6 +286,17 @@ export function usePrayerTimes({
           }
 
           return {
+            // name: p.name,
+            // nameBn: p.nameBn,
+            // time: formatTime(p.start),
+            // timestamp: ts,
+            // endTime: formatTime(endDate),
+            // endTimestamp: endTs,
+            // isCurrent: false,
+            // isNext: false,
+            // isPassed: now > endTs,
+            // remaining,
+            key: p.key, // 👈 IMPORTANT FIX
             name: p.name,
             nameBn: p.nameBn,
             time: formatTime(p.start),
@@ -272,11 +320,43 @@ export function usePrayerTimes({
 
         setPrayerTimes(formatted);
 
+        // setFastingTimes({
+        //   sehriEnd: formatted[0].time,
+        //   iftarStart: formatted[4].time,
+        //   isFastingTime:
+        //     now >= formatted[0].timestamp && now < formatted[4].timestamp,
+        // });
+        // get items by internal key
+        const fajrItem = formatted.find((p) => p.key === "fajr") || null;
+        const maghribItem = formatted.find((p) => p.key === "maghrib") || null;
+
+        const sehriEndTime = fajrItem?.time ?? "";
+        const iftarStartTime = maghribItem?.time ?? "";
+
+        const fajrTs = fajrItem?.timestamp ?? null;
+        const maghribTs = maghribItem?.timestamp ?? null;
+
+        let isFasting = false;
+        let timeUntilIftar = "";
+        const nowTs = now;
+
+        // fasting is valid ONLY between fajr → maghrib
+        if (fajrTs && maghribTs) {
+          isFasting = nowTs >= fajrTs && nowTs < maghribTs;
+
+          if (nowTs < maghribTs) {
+            const diff = maghribTs - nowTs;
+            const h = Math.floor(diff / 3600000);
+            const m = Math.floor((diff % 3600000) / 60000);
+            timeUntilIftar = `${h}h ${m}m`;
+          }
+        }
+
         setFastingTimes({
-          sehriEnd: formatted[0].time,
-          iftarStart: formatted[4].time,
-          isFastingTime:
-            now >= formatted[0].timestamp && now < formatted[4].timestamp,
+          sehriEnd: sehriEndTime,
+          iftarStart: iftarStartTime,
+          isFastingTime: isFasting,
+          ...(timeUntilIftar ? { timeUntilIftar } : {}),
         });
       } catch (e) {
         setError(
