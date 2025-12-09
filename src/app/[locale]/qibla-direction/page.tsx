@@ -23,7 +23,6 @@
 import QiblaDirection from "@/components/qibla/QiblaDirection";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
-import { headers } from "next/headers";
 
 export async function generateMetadata({
   params,

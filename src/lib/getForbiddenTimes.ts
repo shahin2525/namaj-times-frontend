@@ -12,8 +12,8 @@ export function getForbiddenTimes(prayerTimes: any) {
   const zawalStart = prayerTimes.dhuhr;
   const zawalEnd = new Date(zawalStart.getTime() + 7 * 60000);
 
-  const sunsetStart = prayerTimes.maghrib;
-  const sunsetEnd = new Date(sunsetStart.getTime() + 2 * 60000);
+  const sunsetStart = new Date(prayerTimes.maghrib.getTime() - 1 * 60000);
+  const sunsetEnd = prayerTimes.maghrib;
 
   return {
     sunrise: format12(sunrise),

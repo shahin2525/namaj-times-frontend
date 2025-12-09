@@ -231,23 +231,6 @@ export function usePrayerTimes({
         const formatted: PrayerTime[] = list.map((p, i) => {
           let endDate: Date;
 
-          // switch (p.rule) {
-          //   case "SUNRISE":
-          //     endDate = adhan.sunrise;
-          //     break;
-          //   case "SUNSET":
-          //     endDate = adhan.maghrib;
-          //     break;
-          //   case "MIDNIGHT":
-          //     endDate = sunnah.middleOfTheNight;
-          //     break;
-          //   case "NEXT":
-          //     endDate =
-          //       list[i + 1]?.start ?? new Date(p.start.getTime() + 7200000);
-          //     break;
-          //   default:
-          //     endDate = new Date(p.start.getTime() + 7200000);
-          // }
           switch (p.rule) {
             case "SUNRISE":
               endDate = adhan.sunrise;
@@ -286,16 +269,6 @@ export function usePrayerTimes({
           }
 
           return {
-            // name: p.name,
-            // nameBn: p.nameBn,
-            // time: formatTime(p.start),
-            // timestamp: ts,
-            // endTime: formatTime(endDate),
-            // endTimestamp: endTs,
-            // isCurrent: false,
-            // isNext: false,
-            // isPassed: now > endTs,
-            // remaining,
             key: p.key, // 👈 IMPORTANT FIX
             name: p.name,
             nameBn: p.nameBn,
@@ -320,12 +293,6 @@ export function usePrayerTimes({
 
         setPrayerTimes(formatted);
 
-        // setFastingTimes({
-        //   sehriEnd: formatted[0].time,
-        //   iftarStart: formatted[4].time,
-        //   isFastingTime:
-        //     now >= formatted[0].timestamp && now < formatted[4].timestamp,
-        // });
         // get items by internal key
         const fajrItem = formatted.find((p) => p.key === "fajr") || null;
         const maghribItem = formatted.find((p) => p.key === "maghrib") || null;
