@@ -11,6 +11,22 @@
     "title": "Islamic Prayer Times - Accurate Salah Times",
     "desc": "Get accurate prayer times, forbidden prayer times, and Islamic calendar based on your location."
   },
+  "Prayers": {
+    "tahajjud": "Tahajjud",
+    "fajr": "Fajr",
+    "sunrise": "Sunrise",
+    "ishraq": "Ishraq",
+    "chast": "Chasht",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "sunset": "Sunset",
+    "maghrib": "Maghrib",
+    "awabin": "Awwabin",
+    "isha": "Isha",
+    "current": "Current",
+    "next": "Next",
+    "timeRemaining": "Time Remaining"
+  },
   "Prayer": {
     "fajr": "Fajr",
     "sunrise": "Sunrise",

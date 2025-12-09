@@ -199,15 +199,14 @@ export default function PrayerTimes() {
                   <PrayerCard
                     key={prayer.name}
                     prayer={prayer}
-                    locale={validateLocale(locale)}
                     isCurrent={prayer.isCurrent}
                     isNext={prayer.isNext}
-                    isPassed={prayer.isPassed}
-                    index={index}
                   />
                 ))}
               </div>
             )}
+            {/* //   // locale={validateLocale(locale)} // isPassed={prayer.isPassed}
+                    // index={index} */}
           </section>
 
           <footer className="mt-6 pt-6 border-t border-gray-200 text-center text-sm text-gray-600 space-y-2">

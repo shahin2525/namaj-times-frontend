@@ -7,6 +7,22 @@
     "monthlyCalendar": "मासिक कैलेंडर",
     "qiblaDirection": "किबला दिशा"
   },
+  "Prayers": {
+    "tahajjud": "तहज्जुद",
+    "fajr": "फज्र",
+    "sunrise": "सूर्योदय",
+    "ishraq": "इशराक",
+    "chast": "छाश्त",
+    "dhuhr": "ज़ुहर",
+    "asr": "असर",
+    "sunset": "सूर्यास्त",
+    "maghrib": "मग़रिब",
+    "awabin": "आवाबिन",
+    "isha": "ईशा",
+    "current": "वर्तमान",
+    "next": "अगली",
+    "timeRemaining": "बचा हुआ समय"
+  },
   "Prayer": {
     "fajr": "फज्र",
     "sunrise": "सूर्योदय",
