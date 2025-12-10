@@ -1,7 +1,9 @@
+import WeeklyPrayerTimes from "@/components/weekly-prayer/WeeklyPrayerTimes";
+
 const PrayerTimePage = () => {
   return (
     <div>
-      <h1>Prayer Time Page</h1>
+      <WeeklyPrayerTimes />
     </div>
   );
 };

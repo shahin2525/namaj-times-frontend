@@ -192,5 +192,60 @@
         "desc": "Prayer is forbidden exactly at the moment of sunset."
       }
     }
+  },
+  "PrayerTimePage": {
+    "title": "Prayer Times",
+    "description": "Accurate prayer times based on your location",
+    "today": {
+      "title": "Today's Prayer Times",
+      "description": "View current prayer times with countdown",
+      "viewCurrent": "See today's Fajr, Dhuhr, Asr, Maghrib, and Isha times with real-time updates.",
+      "viewButton": "View Today's Times"
+    },
+    "weekly": {
+      "title": "Weekly Prayer Times",
+      "description": "7-day prayer schedule with dates",
+      "feature1": "7 days of prayer times",
+      "feature2": "English and Hijri dates",
+      "feature3": "Daily fasting times",
+      "viewButton": "View Weekly Schedule"
+    },
+    "info": {
+      "title": "About Our Prayer Times",
+      "accuracy": {
+        "title": "High Accuracy",
+        "description": "Calculated using precise astronomical algorithms"
+      },
+      "location": {
+        "title": "Location-Based",
+        "description": "Automatically detects your location for accurate times"
+      },
+      "methods": {
+        "title": "Multiple Methods",
+        "description": "Choose from various calculation methods"
+      }
+    }
+  },
+  "WeeklyPrayerTimes": {
+    "title": "Weekly Prayer Times",
+    "subtitle": "Prayer schedule for the next 7 days",
+    "settings": {
+      "title": "Calculation Settings"
+    },
+    "location": "Location",
+    "retry": "Try Again",
+    "lastUpdated": "Last Updated",
+    "disclaimer": "Times are calculated based on your current location. For precise prayer times, consult your local mosque.",
+    "calcMethod": {
+      "bd_ds": "Bangladesh (Dhaka Shariah Board)",
+      "bd_ua": "Bangladesh (University of Asia)",
+      "mwl": "Muslim World League",
+      "karachi": "Karachi University"
+    },
+    "asrMethods": {
+      "heading": "Asr Calculation Method",
+      "standard": "Standard (Shafi'i)",
+      "hanafi": "Hanafi"
+    }
   }
 }

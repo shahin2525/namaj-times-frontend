@@ -7,7 +7,7 @@ import { usePrayerTimes, CalculationMethodType } from "@/hooks/usePrayerTimes";
 import PrayerCard from "./PrayerCard";
 import FastingTimes from "./FastingTimes";
 import LoadingSpinner from "../ui/LoadingSpinner";
-import { validateLocale } from "@/utils/locale";
+
 import { useLocation } from "@/hooks/useLocation";
 
 export default function PrayerTimes() {

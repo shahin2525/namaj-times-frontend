@@ -33,6 +33,7 @@ export interface FastingTimes {
   sehriEnd: string;
   iftarStart: string;
   isFastingTime: boolean;
+  timeUntilIftar?: string;
 }
 
 export type CalculationMethodType =
@@ -196,7 +197,7 @@ export function usePrayerTimes({
             name: "Asr",
             nameBn: "আসর",
             start: adhan.asr,
-            rule: "SUNSET",
+            rule: "NEXT",
           },
           {
             key: "sunset",
