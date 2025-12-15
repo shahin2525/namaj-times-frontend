@@ -1,6 +1,7 @@
 import WeeklyPrayerTimes from "@/components/weekly-prayer/WeeklyPrayerTimes";
+import React from "react";
 
-const PrayerTimePage = () => {
+const prayerTimesPage = () => {
   return (
     <div>
       <WeeklyPrayerTimes />
@@ -8,4 +9,4 @@ const PrayerTimePage = () => {
   );
 };
 
-export default PrayerTimePage;
+export default prayerTimesPage;

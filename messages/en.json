@@ -237,6 +237,7 @@
     "lastUpdated": "Last Updated",
     "disclaimer": "Times are calculated based on your current location. For precise prayer times, consult your local mosque.",
     "calcMethod": {
+      "main": "Calculation Method",
       "bd_ds": "Bangladesh (Dhaka Shariah Board)",
       "bd_ua": "Bangladesh (University of Asia)",
       "mwl": "Muslim World League",

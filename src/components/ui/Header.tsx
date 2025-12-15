@@ -33,9 +33,14 @@ export default function Header({ locale }: HeaderProps) {
     { code: "hi", name: "Hindi", nativeName: "हिन्दी", flag: "🇮🇳" },
     { code: "ar", name: "Arabic", nativeName: "العربية", flag: "🇸🇦" },
     // Add more languages here as needed
-    // { code: "ur", name: "Urdu", nativeName: "اردو", flag: "🇵🇰" },
-    // { code: "tr", name: "Turkish", nativeName: "Türkçe", flag: "🇹🇷" },
-    // { code: "id", name: "Indonesian", nativeName: "Bahasa Indonesia", flag: "🇮🇩" },
+    { code: "ur", name: "Urdu", nativeName: "اردو", flag: "🇵🇰" },
+    { code: "tr", name: "Turkish", nativeName: "Türkçe", flag: "🇹🇷" },
+    {
+      code: "id",
+      name: "Indonesian",
+      nativeName: "Bahasa Indonesia",
+      flag: "🇮🇩",
+    },
     // { code: "ms", name: "Malay", nativeName: "Bahasa Melayu", flag: "🇲🇾" },
   ];
 

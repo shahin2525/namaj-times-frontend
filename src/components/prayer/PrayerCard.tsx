@@ -196,7 +196,7 @@ export default function PrayerCard({ prayer, isCurrent, isNext }: Props) {
         <p className="font-semibold">
           {prayer.time} - {prayer.endTime}
         </p>
-        {prayer.remaining && (
+        {isCurrent && (
           <p className="text-xs text-gray-600">{prayer.remaining}</p>
         )}
       </div>
