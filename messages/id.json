@@ -1,0 +1,251 @@
+{
+  "Home": {
+    "title": "Waktu Sholat Islam",
+    "subtitle": "Waktu sholat yang akurat, waktu terlarang sholat, dan kalender Islam berdasarkan lokasi Anda",
+    "prayerTimes": "Waktu Sholat",
+    "forbiddenTimes": "Waktu Terlarang",
+    "monthlyCalendar": "Kalender Bulanan",
+    "qiblaDirection": "Arah Kiblat"
+  },
+  "Meta": {
+    "title": "Waktu Sholat Islam - Jadwal Sholat Akurat",
+    "desc": "Dapatkan waktu sholat akurat, waktu terlarang sholat, dan kalender Islam berdasarkan lokasi Anda."
+  },
+  "Prayers": {
+    "tahajjud": "Tahajjud",
+    "fajr": "Subuh",
+    "sunrise": "Matahari Terbit",
+    "ishraq": "Isyraq",
+    "chast": "Dhuha",
+    "dhuhr": "Zuhur",
+    "asr": "Asar",
+    "sunset": "Matahari Terbenam",
+    "maghrib": "Maghrib",
+    "awabin": "Awwabin",
+    "isha": "Isya",
+    "current": "Sedang Berlangsung",
+    "next": "Berikutnya",
+    "timeRemaining": "Sisa Waktu"
+  },
+  "Prayer": {
+    "fajr": "Subuh",
+    "sunrise": "Matahari Terbit",
+    "dhuhr": "Zuhur",
+    "asr": "Asar",
+    "maghrib": "Maghrib",
+    "isha": "Isya",
+    "current": "Sedang Berlangsung",
+    "next": "Berikutnya",
+    "passed": "Telah Berlalu",
+    "sehriEnds": "Akhir Sahur",
+    "iftarStarts": "Waktu Berbuka",
+    "fastingInProgress": "Sedang Berpuasa",
+    "notFastingTime": "Bukan Waktu Puasa",
+    "untilFajr": "Hingga Subuh",
+    "atMaghribTime": "Saat Waktu Maghrib"
+  },
+  "PrayerTimes": {
+    "title": "Waktu Sholat Hari Ini",
+    "retry": "Coba Lagi",
+    "lastUpdated": "Terakhir Diperbarui",
+    "location": "Lokasi",
+    "seo": {
+      "name": "Waktu Sholat",
+      "description": "Waktu sholat akurat dan kalender Islam"
+    },
+    "calcMethod": {
+      "heading": "Metode Perhitungan",
+      "main": "Metode Utama",
+      "bd_ds": "Islamic Foundation Bangladesh",
+      "bd_ua": "Universitas Islam Karachi",
+      "mwl": "Liga Muslim Dunia",
+      "karachi": "Universitas Karachi"
+    },
+    "asrMethods": {
+      "heading": "Metode Asar",
+      "standard": "Syafi'i / Hanbali",
+      "hanafi": "Hanafi"
+    }
+  },
+  "Navigation": {
+    "home": "Beranda",
+    "prayerTimes": "Waktu Sholat",
+    "forbiddenTimes": "Waktu Terlarang",
+    "monthlyCalendar": "Kalender Bulanan",
+    "qiblaDirection": "Arah Kiblat"
+  },
+  "Common": {
+    "loading": "Memuat...",
+    "error": "Terjadi Kesalahan",
+    "retry": "Coba Lagi",
+    "location": "Lokasi",
+    "time": "Waktu",
+    "date": "Tanggal",
+    "lastUpdated": "Terakhir Diperbarui"
+  },
+  "HijriDate": {
+    "currentDate": "Tanggal Hari Ini",
+    "hijriYear": "H"
+  },
+  "Location": {
+    "currentLocation": "Lokasi Saat Ini",
+    "useCurrentLocation": "Gunakan Lokasi Saat Ini",
+    "useDemoLocation": "Gunakan Lokasi Demo",
+    "detecting": "Mendeteksi Lokasi...",
+    "enterManual": "Atau masukkan lokasi secara manual:",
+    "cityPlaceholder": "Masukkan nama kota",
+    "setLocation": "Atur Lokasi",
+    "geolocationNotSupported": "Geolokasi tidak didukung oleh browser Anda",
+    "locationAccessDenied": "Akses lokasi ditolak. Izinkan akses lokasi atau masukkan secara manual.",
+    "unknownCity": "Kota Tidak Dikenal",
+    "unknownCountry": "Negara Tidak Dikenal"
+  },
+  "Forbidden": {
+    "title": "Waktu Terlarang untuk Sholat",
+    "note": "Sholat sunnah (nafl) dilarang pada waktu-waktu ini. Namun, sholat qadha dapat dilakukan kapan saja.",
+    "period": "Periode Waktu",
+    "duration": "Durasi",
+    "reason": "Alasan",
+    "items": [
+      {
+        "period": "Setelah sholat Subuh",
+        "duration": "Hingga matahari terbit",
+        "reason": "Waktu makruh"
+      },
+      {
+        "period": "Saat matahari terbit",
+        "duration": "20 menit setelah matahari terbit",
+        "reason": "Waktu penyembahan matahari"
+      },
+      {
+        "period": "Zawal (matahari di puncak)",
+        "duration": "15–20 menit sebelum sholat Zuhur",
+        "reason": "Matahari berada di tengah langit"
+      },
+      {
+        "period": "Setelah sholat Asar",
+        "duration": "Hingga matahari terbenam",
+        "reason": "Waktu makruh"
+      },
+      {
+        "period": "Saat matahari terbenam",
+        "duration": "Sekitar 20 menit saat terbenam",
+        "reason": "Waktu penyembahan matahari"
+      }
+    ]
+  },
+  "Qibla": {
+    "title": "Pencari Arah Kiblat",
+    "description": "Temukan arah Ka'bah bagi umat Islam yang tinggal di ",
+    "subtitle": "Temukan arah Ka'bah di Mekah dari lokasi Anda saat ini",
+    "loading": "Menghitung arah Kiblat...",
+    "error": "Tidak dapat menentukan arah Kiblat",
+    "retry": "Coba Lagi",
+    "locationError": "Aktifkan layanan lokasi untuk menemukan arah Kiblat",
+    "compassError": "Kompas tidak didukung atau izin ditolak",
+    "enableCompass": "Aktifkan Kompas",
+    "compassHelp": "Ketuk tombol di bawah untuk mengaktifkan kompas",
+    "direction": "Arah Kiblat",
+    "degrees": "derajat dari Utara",
+    "facingQibla": "Anda menghadap Kiblat",
+    "turnLeft": "Putar ke kiri",
+    "turnRight": "Putar ke kanan",
+    "adjust": "Sesuaikan arah Anda"
+  },
+  "Calendar": {
+    "title": "Kalender Islam Bulanan",
+    "today": "Hari Ini",
+    "previousMonth": "Bulan Sebelumnya",
+    "nextMonth": "Bulan Berikutnya",
+    "selectedDate": "Tanggal Dipilih",
+    "gregorian": "Masehi",
+    "hijri": "Hijriah",
+    "prayerTimes": "Waktu Sholat",
+    "prayerTimesUnavailable": "Waktu sholat tidak tersedia",
+    "islamicMonths": "Bulan Islam",
+    "fajr": "subuh",
+    "sunrise": "matahari terbit",
+    "dhuhr": "zuhur",
+    "asr": "asar",
+    "maghrib": "maghrib",
+    "isha": "isya",
+    "meta": {
+      "title": "Kalender Islam - Tanggal Hijriah & Waktu Sholat",
+      "description": "Kalender Islam bulanan lengkap dengan tanggal Hijriah, waktu sholat, dan bulan Islam.",
+      "keywords": "kalender islam, kalender hijriah, waktu sholat, kalender muslim"
+    }
+  },
+  "Forbidden2": {
+    "title": "Waktu Sholat Terlarang",
+    "forbidden": {
+      "sunrise": {
+        "title": "Matahari Terbit",
+        "desc": "Sholat dilarang saat matahari terbit."
+      },
+      "zawal": {
+        "title": "Zawal (Tengah Hari)",
+        "desc": "Sholat tidak diperbolehkan saat matahari berada di titik tertinggi."
+      },
+      "sunset": {
+        "title": "Matahari Terbenam",
+        "desc": "Sholat dilarang tepat saat matahari terbenam."
+      }
+    }
+  },
+  "PrayerTimePage": {
+    "title": "Waktu Sholat",
+    "description": "Waktu sholat akurat berdasarkan lokasi Anda",
+    "today": {
+      "title": "Waktu Sholat Hari Ini",
+      "description": "Lihat waktu sholat saat ini dengan hitung mundur",
+      "viewCurrent": "Lihat waktu Subuh, Zuhur, Asar, Maghrib, dan Isya hari ini.",
+      "viewButton": "Lihat Waktu Hari Ini"
+    },
+    "weekly": {
+      "title": "Waktu Sholat Mingguan",
+      "description": "Jadwal sholat 7 hari",
+      "feature1": "Waktu sholat selama 7 hari",
+      "feature2": "Tanggal Masehi dan Hijriah",
+      "feature3": "Waktu puasa harian",
+      "viewButton": "Lihat Jadwal Mingguan"
+    },
+    "info": {
+      "title": "Tentang Waktu Sholat Kami",
+      "accuracy": {
+        "title": "Akurasi Tinggi",
+        "description": "Dihitung menggunakan algoritma astronomi yang presisi"
+      },
+      "location": {
+        "title": "Berbasis Lokasi",
+        "description": "Mendeteksi lokasi secara otomatis untuk waktu yang akurat"
+      },
+      "methods": {
+        "title": "Berbagai Metode",
+        "description": "Pilih dari berbagai metode perhitungan"
+      }
+    }
+  },
+  "WeeklyPrayerTimes": {
+    "title": "Waktu Sholat Mingguan",
+    "subtitle": "Jadwal sholat untuk 7 hari ke depan",
+    "settings": {
+      "title": "Pengaturan Perhitungan"
+    },
+    "location": "Lokasi",
+    "retry": "Coba Lagi",
+    "lastUpdated": "Terakhir Diperbarui",
+    "disclaimer": "Waktu dihitung berdasarkan lokasi Anda. Untuk ketepatan, konsultasikan dengan masjid setempat.",
+    "calcMethod": {
+      "main": "Metode Perhitungan",
+      "bd_ds": "Bangladesh (Dewan Syariah Dhaka)",
+      "bd_ua": "Bangladesh (Universitas Asia)",
+      "mwl": "Liga Muslim Dunia",
+      "karachi": "Universitas Karachi"
+    },
+    "asrMethods": {
+      "heading": "Metode Perhitungan Asar",
+      "standard": "Standar (Syafi'i)",
+      "hanafi": "Hanafi"
+    }
+  }
+}

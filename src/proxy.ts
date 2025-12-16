@@ -15,13 +15,13 @@
 import createMiddleware from "next-intl/middleware";
 
 export default createMiddleware({
-  locales: ["en", "bn", "hi", "ar", "ur"],
+  locales: ["en", "bn", "hi", "ar", "ur", "id", "ms", "tr"],
   defaultLocale: "en",
   localeDetection: true, // auto-detect browser language
 });
 
 export const config = {
   // Match each locale explicitly ["/", "/en/:path*", "/bn/:path*", "/hi/:path*"],
-  matcher: ["/", "/(bn|en|hi|ar|ur)/:path*"],
+  matcher: ["/", "/(bn|en|hi|ar|ur|id|ms|tr)/:path*"],
   //matcher: ['/', '/(bn|en|hi|ar)/:path*']
 };

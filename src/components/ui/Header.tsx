@@ -41,7 +41,7 @@ export default function Header({ locale }: HeaderProps) {
       nativeName: "Bahasa Indonesia",
       flag: "🇮🇩",
     },
-    // { code: "ms", name: "Malay", nativeName: "Bahasa Melayu", flag: "🇲🇾" },
+    { code: "ms", name: "Malay", nativeName: "Bahasa Melayu", flag: "🇲🇾" },
   ];
 
   const navItems = [

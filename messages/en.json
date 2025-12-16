@@ -247,6 +247,12 @@
       "heading": "Asr Calculation Method",
       "standard": "Standard (Shafi'i)",
       "hanafi": "Hanafi"
+    },
+    "ramadan": {
+      "title": "Fasting Schedule",
+      "sehriEnds": "Sehri Ends",
+      "iftar": "Iftar",
+      "iftarIn": "Iftar in"
     }
   }
 }
