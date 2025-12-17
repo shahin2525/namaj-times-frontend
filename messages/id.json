@@ -246,6 +246,12 @@
       "heading": "Metode Perhitungan Asar",
       "standard": "Standar (Syafi'i)",
       "hanafi": "Hanafi"
+    },
+    "ramadan": {
+      "title": "Jadwal Puasa Ramadan",
+      "sehriEnds": "Akhir Sahur",
+      "iftar": "Buka Puasa",
+      "iftarIn": "Waktu Menuju Buka Puasa"
     }
   }
 }

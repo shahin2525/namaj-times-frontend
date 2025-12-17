@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ForbiddenTimeContent from "@/components/forbidden/ForbiddenTimeContent";
+
 import ForbiddenTimeSection from "@/components/forbidden/ForbiddenTimeSection";
 
 export default function ForbiddenTimePage() {

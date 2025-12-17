@@ -12,8 +12,8 @@ export default function FastingTimes({
   fastingTimes,
   locale,
 }: FastingTimesProps) {
-  const t = useTranslations("Prayer");
-
+  // const t = useTranslations("Prayer");
+  const t = useTranslations("WeeklyPrayerTimes.ramadan");
   if (!fastingTimes?.sehriEnd || !fastingTimes?.iftarStart) {
     return null;
   }
@@ -28,7 +28,7 @@ export default function FastingTimes({
           id="fasting-times-heading"
           className="text-2xl font-bold mb-4 text-center"
         >
-          {locale === "bn" ? "রোজার সময়সূচী" : "Fasting Schedule"}
+          {t("title")}
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -41,7 +41,7 @@ export default function FastingTimes({
             }`}
           >
             <h3 className="font-semibold text-lg mb-2">
-              {locale === "bn" ? "সেহরি শেষ" : "Sehri Ends"}
+              {t("sehriEnds")}: {fastingTimes.sehriEnd}
             </h3>
             <div className="text-3xl font-bold">{fastingTimes.sehriEnd}</div>
             <p className="text-sm mt-2 opacity-90">
@@ -58,9 +58,14 @@ export default function FastingTimes({
             }`}
           >
             <h3 className="font-semibold text-lg mb-2">
-              {locale === "bn" ? "ইফতার শুরু" : "Iftar Starts"}
+              {t("iftar")}: {fastingTimes.iftarStart}
             </h3>
             <div className="text-3xl font-bold">{fastingTimes.iftarStart}</div>
+            {fastingTimes.timeUntilIftar && (
+              <div className="text-green-700 font-medium ">
+                {t("iftarIn")} {fastingTimes.timeUntilIftar}
+              </div>
+            )}
             <p className="text-sm mt-2 opacity-90">
               {locale === "bn" ? "মাগরিবের সময়" : "At Maghrib time"}
             </p>

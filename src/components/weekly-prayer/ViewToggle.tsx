@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default function ViewToggle({ view, setView }: any) {
   return (
     <div className="flex justify-end mb-4 gap-2">

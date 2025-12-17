@@ -246,6 +246,12 @@
       "heading": "Kaedah Pengiraan Asar",
       "standard": "Standard (Syafi'i)",
       "hanafi": "Hanafi"
+    },
+    "ramadan": {
+      "title": "Jadual Waktu Berbuka & Sahur",
+      "sehriEnds": "Tamatt Sahur",
+      "iftar": "Berbuka Puasa",
+      "iftarIn": "Baki Masa Berbuka"
     }
   }
 }

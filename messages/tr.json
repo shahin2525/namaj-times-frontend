@@ -246,6 +246,12 @@
       "heading": "İkindi Hesaplama Yöntemi",
       "standard": "Standart (Şafii)",
       "hanafi": "Hanefi"
+    },
+    "ramadan": {
+      "title": "Ramazan Zaman Çizelgesi",
+      "sehriEnds": "Sahur Bitişi",
+      "iftar": "İftar",
+      "iftarIn": "İftara Kalan Süre"
     }
   }
 }

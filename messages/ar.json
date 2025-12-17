@@ -246,6 +246,12 @@
       "heading": "طريقة حساب العصر",
       "standard": "قياسي (شافعي)",
       "hanafi": "حنفي"
+    },
+    "ramadan": {
+      "title": "Ramazan Zaman Çizelgesi",
+      "sehriEnds": "Sahur Bitişi",
+      "iftar": "İftar",
+      "iftarIn": "İftara Kalan Süre"
     }
   }
 }
