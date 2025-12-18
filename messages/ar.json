@@ -177,6 +177,7 @@
   },
   "Forbidden2": {
     "title": "أوقات النهي عن الصلاة",
+    "titleWithCity": "أوقات النهي عن الصلاة في {city}",
     "forbidden": {
       "sunrise": {
         "title": "الشروق",

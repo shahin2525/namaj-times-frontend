@@ -179,6 +179,7 @@
   },
   "Forbidden2": {
     "title": "নিষিদ্ধ নামাজের সময়",
+    "titleWithCity": "{city}-এ নিষিদ্ধ নামাজের সময়",
     "forbidden": {
       "sunrise": {
         "title": "সূর্যোদয়",

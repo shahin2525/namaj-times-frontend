@@ -177,6 +177,7 @@
   },
   "Forbidden2": {
     "title": "ممنوعہ نماز کے اوقات",
+    "titleWithCity": "{city} میں ممنوعہ نماز کے اوقات",
     "forbidden": {
       "sunrise": {
         "title": "طلوع آفتاب",

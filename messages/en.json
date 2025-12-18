@@ -178,6 +178,7 @@
   },
   "Forbidden2": {
     "title": "Forbidden Prayer Times",
+    "titleWithCity": "Forbidden Prayer Times in {city}",
     "forbidden": {
       "sunrise": {
         "title": "Sunrise",
