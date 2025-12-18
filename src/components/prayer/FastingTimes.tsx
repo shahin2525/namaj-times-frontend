@@ -34,41 +34,48 @@ export default function FastingTimes({
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Sehri Time */}
           <div
-            className={`text-center p-4 rounded-xl transition-all duration-300 ${
+            className={`text-center p-4 rounded-xl transition-all duration-300 flex justify-center items-center ${
               fastingTimes.isFastingTime
                 ? "bg-yellow-500 text-gray-800 shadow-lg"
                 : "bg-white/20"
             }`}
           >
-            <h3 className="font-semibold text-lg mb-2">
+            <h3 className="text-3xl font-bold mt-2 pt-2 mb-2">
               {t("sehriEnds")}: {fastingTimes.sehriEnd}
             </h3>
-            <div className="text-3xl font-bold">{fastingTimes.sehriEnd}</div>
-            <p className="text-sm mt-2 opacity-90">
+
+            {/* <div className="text-3xl font-bold">{fastingTimes.sehriEnd}</div> */}
+            {/* <p className="text-sm mt-2 opacity-90">
               {locale === "bn" ? "ফজরের আগ পর্যন্ত" : "Until Fajr"}
-            </p>
+            </p> */}
           </div>
 
           {/* Iftar Time */}
           <div
-            className={`text-center p-4 rounded-xl transition-all duration-300 ${
+            className={`text-center p-4 rounded-xl transition-all duration-300 flex justify-center items-center ${
               !fastingTimes.isFastingTime
                 ? "bg-green-400 text-white shadow-lg"
-                : "bg-white/20"
+                : "bg-yellow-500 text-gray-800 shadow-lg"
             }`}
+            //bg-white/20
           >
-            <h3 className="font-semibold text-lg mb-2">
-              {t("iftar")}: {fastingTimes.iftarStart}
-            </h3>
-            <div className="text-3xl font-bold">{fastingTimes.iftarStart}</div>
-            {fastingTimes.timeUntilIftar && (
-              <div className="text-green-700 font-medium ">
-                {t("iftarIn")} {fastingTimes.timeUntilIftar}
-              </div>
-            )}
-            <p className="text-sm mt-2 opacity-90">
+            <div>
+              <div className="h-1"></div>
+              <h3 className="text-3xl font-bold mb-2">
+                {t("iftar")}: {fastingTimes.iftarStart}
+              </h3>
+
+              {fastingTimes.timeUntilIftar && (
+                <h4 className="text-green-700 font-medium ">
+                  {t("iftarIn")}: {fastingTimes.timeUntilIftar}
+                </h4>
+              )}
+            </div>
+            {/* <div className="text-3xl font-bold">{fastingTimes.iftarStart}</div> */}
+
+            {/* <p className="text-sm mt-2 opacity-90">
               {locale === "bn" ? "মাগরিবের সময়" : "At Maghrib time"}
-            </p>
+            </p> */}
           </div>
         </div>
 
