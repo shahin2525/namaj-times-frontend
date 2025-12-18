@@ -7,7 +7,8 @@ import PrayerTimes from "@/components/prayer/PrayerTimes";
 import HijriDate from "@/components/prayer/HijriDate";
 import ForbiddenTimes from "@/components/prayer/ForbiddenTimes";
 import AdSense from "@/components/ui/AdSense";
-import ForbiddenTimeSection from "@/components/forbidden/ForbiddenTimeSection";
+import HomeForbiddenTimeSection from "@/components/forbidden/HomeForbiddenTimeSection";
+// import ForbiddenTimeSection from "@/components/forbidden/ForbiddenTimeSection";
 
 // Generate metadata
 export async function generateMetadata({
@@ -127,7 +128,7 @@ export default function HomePage() {
 
         {/* Forbidden Times */}
         <div className="flex justify-center">
-          <ForbiddenTimeSection />
+          <HomeForbiddenTimeSection />
         </div>
 
         {/* AdSense Bottom */}

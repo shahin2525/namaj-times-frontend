@@ -37,7 +37,7 @@ export default function FastingTimes({
             className={`text-center p-4 rounded-xl transition-all duration-300 flex justify-center items-center ${
               fastingTimes.isFastingTime
                 ? "bg-yellow-500 text-gray-800 shadow-lg"
-                : "bg-white/20"
+                : "bg-green-400 text-white shadow-lg"
             }`}
           >
             <h3 className="text-3xl font-bold mt-2 pt-2 mb-2">
