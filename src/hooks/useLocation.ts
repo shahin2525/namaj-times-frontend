@@ -9,6 +9,7 @@ export interface Location {
   longitude: number;
   city?: string | null;
   country?: string | null;
+  timeZone?: string;
 }
 
 export function useLocation() {

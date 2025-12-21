@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import StructuredData from "@/components/seo/StructuredData";
 import PrayerTimes from "@/components/prayer/PrayerTimes";
 import HijriDate from "@/components/prayer/HijriDate";
-import ForbiddenTimes from "@/components/prayer/ForbiddenTimes";
+// import ForbiddenTimes from "@/components/prayer/ForbiddenTimes";
 import AdSense from "@/components/ui/AdSense";
 import HomeForbiddenTimeSection from "@/components/forbidden/HomeForbiddenTimeSection";
 // import ForbiddenTimeSection from "@/components/forbidden/ForbiddenTimeSection";

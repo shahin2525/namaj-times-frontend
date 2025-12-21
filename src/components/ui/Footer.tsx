@@ -65,9 +65,9 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-green-200 mb-4 leading-relaxed">
-              Your trusted companion for accurate prayer times, Islamic
-              calendar, and religious guidance. Serving the Muslim community
-              worldwide.
+              Your trusted companion for accurate Namaj times,forbidden Namaj
+              times, Islamic calendar, and religious guidance. Serving the
+              Muslim community worldwide.
             </p>
             <div className="flex space-x-3">
               {socialLinks.map((social) => (
