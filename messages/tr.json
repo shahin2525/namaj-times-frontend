@@ -1,25 +1,25 @@
 {
   "Home": {
     "title": "İslami Namaz Vakitleri",
-    "subtitle": "Konumunuza göre doğru namaz vakitleri, yasaklı vakitler ve İslami takvim",
+    "subtitle": "Konumunuza göre doğru namaz vakitleri, yasak vakitler ve İslami takvim",
     "prayerTimes": "Namaz Vakitleri",
-    "forbiddenTimes": "Yasaklı Vakitler",
+    "forbiddenTimes": "Yasak Vakitler",
     "monthlyCalendar": "Aylık Takvim",
     "qiblaDirection": "Kıble Yönü"
   },
   "Meta": {
-    "title": "İslami Namaz Vakitleri - Doğru Vakitler",
-    "desc": "Konumunuza göre doğru namaz vakitlerini, yasaklı vakitleri ve İslami takvimi öğrenin."
+    "title": "İslami Namaz Vakitleri - Doğru Namaz Saatleri",
+    "desc": "Konumunuza göre doğru namaz vakitleri, yasak vakitler ve İslami takvim bilgileri."
   },
   "Prayers": {
     "tahajjud": "Teheccüd",
     "fajr": "İmsak",
-    "sunrise": "Güneş Doğuşu",
+    "sunrise": "Güneş",
     "ishraq": "İşrak",
-    "chast": "Duha",
+    "chast": "Kuşluk",
     "dhuhr": "Öğle",
     "asr": "İkindi",
-    "sunset": "Güneş Batışı",
+    "sunset": "Gün Batımı",
     "maghrib": "Akşam",
     "awabin": "Evvabin",
     "isha": "Yatsı",
@@ -29,7 +29,7 @@
   },
   "Prayer": {
     "fajr": "İmsak",
-    "sunrise": "Güneş Doğuşu",
+    "sunrise": "Güneş",
     "dhuhr": "Öğle",
     "asr": "İkindi",
     "maghrib": "Akşam",
@@ -38,7 +38,7 @@
     "next": "Sonraki",
     "passed": "Geçti",
     "sehriEnds": "Sahur Bitişi",
-    "iftarStarts": "İftar Vakti",
+    "iftarStarts": "İftar Başlangıcı",
     "fastingInProgress": "Oruç Devam Ediyor",
     "notFastingTime": "Oruç Zamanı Değil",
     "untilFajr": "İmsağa Kadar",
@@ -57,20 +57,20 @@
       "heading": "Hesaplama Yöntemi",
       "main": "Ana Yöntem",
       "bd_ds": "Bangladeş İslami Vakfı",
-      "bd_ua": "İslam Üniversitesi Karachi",
-      "mwl": "Dünya Müslüman Birliği",
-      "karachi": "Karachi Üniversitesi"
+      "bd_ua": "İslami Üniversite, Karaçi",
+      "mwl": "Müslüman Dünya Birliği",
+      "karachi": "Karaçi Üniversitesi"
     },
     "asrMethods": {
-      "heading": "İkindi Hesaplama Yöntemi",
-      "standard": "Şafii / Hanbeli",
+      "heading": "İkindi Yöntemi",
+      "standard": "Şafi / Hanbeli",
       "hanafi": "Hanefi"
     }
   },
   "Navigation": {
     "home": "Ana Sayfa",
     "prayerTimes": "Namaz Vakitleri",
-    "forbiddenTimes": "Yasaklı Vakitler",
+    "forbiddenTimes": "Yasak Vakitler",
     "monthlyCalendar": "Aylık Takvim",
     "qiblaDirection": "Kıble Yönü"
   },
@@ -85,7 +85,7 @@
   },
   "HijriDate": {
     "currentDate": "Bugünün Tarihi",
-    "hijriYear": "H"
+    "hijriYear": "Hicri"
   },
   "Location": {
     "currentLocation": "Mevcut Konum",
@@ -93,16 +93,16 @@
     "useDemoLocation": "Demo Konum Kullan",
     "detecting": "Konum Algılanıyor...",
     "enterManual": "Veya konumu manuel girin:",
-    "cityPlaceholder": "Şehir adını girin",
+    "cityPlaceholder": "Şehir adı girin",
     "setLocation": "Konumu Ayarla",
-    "geolocationNotSupported": "Tarayıcınız konum hizmetini desteklemiyor",
-    "locationAccessDenied": "Konum erişimi reddedildi. Lütfen izin verin veya manuel girin.",
+    "geolocationNotSupported": "Tarayıcınız konum desteği sunmuyor",
+    "locationAccessDenied": "Konum izni reddedildi. Lütfen izin verin veya manuel girin.",
     "unknownCity": "Bilinmeyen Şehir",
     "unknownCountry": "Bilinmeyen Ülke"
   },
   "Forbidden": {
-    "title": "Namaz Kılınması Yasak Olan Vakitler",
-    "note": "Bu vakitlerde nafile namaz kılınması mekruhtur. Ancak kaza namazları her zaman kılınabilir.",
+    "title": "Namaz İçin Yasak Vakitler",
+    "note": "Bu vakitlerde nafile namaz kılınmaz. Kaza namazları her zaman kılınabilir.",
     "period": "Zaman Aralığı",
     "duration": "Süre",
     "reason": "Sebep",
@@ -113,35 +113,35 @@
         "reason": "Mekruh vakit"
       },
       {
-        "period": "Güneşin doğduğu an",
-        "duration": "Güneş doğduktan sonra yaklaşık 20 dakika",
-        "reason": "Güneşe tapınma zamanı"
+        "period": "Güneşin doğuşu",
+        "duration": "Doğuştan sonraki 20 dakika",
+        "reason": "Güneşe tapınma vakti"
       },
       {
-        "period": "Zeval (güneş tam tepedeyken)",
-        "duration": "Öğle namazından 15–20 dakika önce",
-        "reason": "Güneşin meridyende olması"
+        "period": "Zeval (güneşin tepe noktası)",
+        "duration": "Öğleden 15–20 dakika önce",
+        "reason": "Güneşin tam tepe noktası"
       },
       {
         "period": "İkindi namazından sonra",
-        "duration": "Güneş batana kadar",
+        "duration": "Gün batımına kadar",
         "reason": "Mekruh vakit"
       },
       {
-        "period": "Güneş batarken",
-        "duration": "Güneş batışı sırasında yaklaşık 20 dakika",
-        "reason": "Güneşe tapınma zamanı"
+        "period": "Gün batımı",
+        "duration": "Yaklaşık 20 dakika",
+        "reason": "Güneşe tapınma vakti"
       }
     ]
   },
   "Qibla": {
     "title": "Kıble Yönü Bulucu",
-    "description": "Bulunduğunuz yerden Kâbe yönünü bulun ",
+    "description": "Müslümanlar için Kâbe yönünü bulun ",
     "subtitle": "Mevcut konumunuzdan Mekke'deki Kâbe yönünü bulun",
     "loading": "Kıble yönü hesaplanıyor...",
     "error": "Kıble yönü belirlenemedi",
     "retry": "Tekrar Dene",
-    "locationError": "Kıble yönünü bulmak için konum servislerini etkinleştirin",
+    "locationError": "Kıble yönünü bulmak için konum hizmetlerini etkinleştirin",
     "compassError": "Pusula desteklenmiyor veya izin reddedildi",
     "enableCompass": "Pusulayı Etkinleştir",
     "compassHelp": "Pusulayı etkinleştirmek için aşağıdaki butona dokunun",
@@ -153,7 +153,7 @@
     "adjust": "Yönünüzü ayarlayın"
   },
   "Calendar": {
-    "title": "Aylık İslami Takvim",
+    "title": "İslami Aylık Takvim",
     "today": "Bugün",
     "previousMonth": "Önceki Ay",
     "nextMonth": "Sonraki Ay",
@@ -164,19 +164,20 @@
     "prayerTimesUnavailable": "Namaz vakitleri mevcut değil",
     "islamicMonths": "İslami Aylar",
     "fajr": "imsak",
-    "sunrise": "güneş doğuşu",
+    "sunrise": "güneş",
     "dhuhr": "öğle",
     "asr": "ikindi",
     "maghrib": "akşam",
     "isha": "yatsı",
     "meta": {
-      "title": "İslami Takvim - Hicri Tarihler ve Namaz Vakitleri",
-      "description": "Hicri tarihler, namaz vakitleri ve İslami ayları içeren aylık İslami takvim.",
+      "title": "İslami Takvim - Aylık Hicri Tarihler ve Namaz Vakitleri",
+      "description": "Hicri tarihler, namaz vakitleri ve İslami ayları içeren kapsamlı takvim.",
       "keywords": "islami takvim, hicri takvim, namaz vakitleri, müslüman takvimi"
     }
   },
   "Forbidden2": {
-    "title": "Yasaklı Namaz Vakitleri",
+    "title": "Yasak Namaz Vakitleri",
+    "titleWithCity": "{city} için Yasak Namaz Vakitleri",
     "forbidden": {
       "sunrise": {
         "title": "Güneş Doğuşu",
@@ -184,10 +185,10 @@
       },
       "zawal": {
         "title": "Zeval (Öğle Öncesi)",
-        "desc": "Güneş en yüksek noktadayken namaz kılınmaz."
+        "desc": "Güneş en tepe noktadayken namaz kılınmaz."
       },
       "sunset": {
-        "title": "Güneş Batışı",
+        "title": "Gün Batımı",
         "desc": "Güneş batarken namaz kılmak yasaktır."
       }
     }
@@ -197,61 +198,61 @@
     "description": "Konumunuza göre doğru namaz vakitleri",
     "today": {
       "title": "Bugünün Namaz Vakitleri",
-      "description": "Geri sayım ile güncel namaz vakitlerini görüntüleyin",
-      "viewCurrent": "Bugünkü İmsak, Öğle, İkindi, Akşam ve Yatsı vakitlerini görün.",
-      "viewButton": "Bugünün Vakitlerini Gör"
+      "description": "Geri sayım ile güncel vakitleri görüntüleyin",
+      "viewCurrent": "Bugünkü İmsak, Öğle, İkindi, Akşam ve Yatsı vakitlerini görüntüleyin.",
+      "viewButton": "Bugünü Görüntüle"
     },
     "weekly": {
       "title": "Haftalık Namaz Vakitleri",
       "description": "7 günlük namaz programı",
       "feature1": "7 günlük namaz vakitleri",
       "feature2": "Miladi ve Hicri tarihler",
-      "feature3": "Günlük oruç vakitleri",
+      "feature3": "Günlük oruç saatleri",
       "viewButton": "Haftalık Programı Gör"
     },
     "info": {
       "title": "Namaz Vakitlerimiz Hakkında",
       "accuracy": {
         "title": "Yüksek Doğruluk",
-        "description": "Hassas astronomik algoritmalarla hesaplanır"
+        "description": "Hassas astronomik hesaplamalara dayalı"
       },
       "location": {
-        "title": "Konum Tabanlı",
-        "description": "Doğru vakitler için konum otomatik algılanır"
+        "title": "Konuma Dayalı",
+        "description": "Doğru vakitler için otomatik konum algılama"
       },
       "methods": {
         "title": "Birden Fazla Yöntem",
-        "description": "Çeşitli hesaplama yöntemlerinden seçim yapın"
+        "description": "Çeşitli hesaplama yöntemleri arasından seçim yapın"
       }
     }
   },
   "WeeklyPrayerTimes": {
     "title": "Haftalık Namaz Vakitleri",
-    "subtitle": "Önümüzdeki 7 gün için namaz programı",
+    "subtitle": "Önümüzdeki 7 günün namaz programı",
     "settings": {
       "title": "Hesaplama Ayarları"
     },
     "location": "Konum",
     "retry": "Tekrar Dene",
     "lastUpdated": "Son Güncelleme",
-    "disclaimer": "Vakitler mevcut konumunuza göre hesaplanmıştır. Kesinlik için yerel camiye danışın.",
+    "disclaimer": "Vakitler mevcut konumunuza göre hesaplanmıştır.",
     "calcMethod": {
       "main": "Hesaplama Yöntemi",
       "bd_ds": "Bangladeş (Dhaka Şeriat Kurulu)",
       "bd_ua": "Bangladeş (Asya Üniversitesi)",
-      "mwl": "Dünya Müslüman Birliği",
-      "karachi": "Karachi Üniversitesi"
+      "mwl": "Müslüman Dünya Birliği",
+      "karachi": "Karaçi Üniversitesi"
     },
     "asrMethods": {
       "heading": "İkindi Hesaplama Yöntemi",
-      "standard": "Standart (Şafii)",
+      "standard": "Standart (Şafi)",
       "hanafi": "Hanefi"
     },
     "ramadan": {
-      "title": "Ramazan Zaman Çizelgesi",
+      "title": "Ramazan Oruç Programı",
       "sehriEnds": "Sahur Bitişi",
       "iftar": "İftar",
-      "iftarIn": "İftara Kalan Süre"
+      "iftarIn": "İftara Kalan"
     }
   },
   "HijriMonths": {

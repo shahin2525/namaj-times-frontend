@@ -1,29 +1,29 @@
 {
   "Home": {
-    "title": "Waktu Sholat Islam",
-    "subtitle": "Waktu sholat yang akurat, waktu terlarang sholat, dan kalender Islam berdasarkan lokasi Anda",
-    "prayerTimes": "Waktu Sholat",
+    "title": "Waktu Salat Islam",
+    "subtitle": "Waktu salat yang akurat, waktu terlarang, dan kalender Islam berdasarkan lokasi Anda",
+    "prayerTimes": "Waktu Salat",
     "forbiddenTimes": "Waktu Terlarang",
     "monthlyCalendar": "Kalender Bulanan",
     "qiblaDirection": "Arah Kiblat"
   },
   "Meta": {
-    "title": "Waktu Sholat Islam - Jadwal Sholat Akurat",
-    "desc": "Dapatkan waktu sholat akurat, waktu terlarang sholat, dan kalender Islam berdasarkan lokasi Anda."
+    "title": "Waktu Salat Islam - Jadwal Salat Akurat",
+    "desc": "Dapatkan waktu salat yang akurat, waktu terlarang, dan kalender Islam berdasarkan lokasi Anda."
   },
   "Prayers": {
-    "tahajjud": "Tahajjud",
+    "tahajjud": "Tahajud",
     "fajr": "Subuh",
     "sunrise": "Matahari Terbit",
     "ishraq": "Isyraq",
-    "chast": "Dhuha",
+    "chast": "Duha",
     "dhuhr": "Zuhur",
     "asr": "Asar",
     "sunset": "Matahari Terbenam",
-    "maghrib": "Maghrib",
+    "maghrib": "Magrib",
     "awabin": "Awwabin",
     "isha": "Isya",
-    "current": "Sedang Berlangsung",
+    "current": "Saat Ini",
     "next": "Berikutnya",
     "timeRemaining": "Sisa Waktu"
   },
@@ -32,34 +32,34 @@
     "sunrise": "Matahari Terbit",
     "dhuhr": "Zuhur",
     "asr": "Asar",
-    "maghrib": "Maghrib",
+    "maghrib": "Magrib",
     "isha": "Isya",
-    "current": "Sedang Berlangsung",
+    "current": "Saat Ini",
     "next": "Berikutnya",
     "passed": "Telah Berlalu",
     "sehriEnds": "Akhir Sahur",
-    "iftarStarts": "Waktu Berbuka",
-    "fastingInProgress": "Sedang Berpuasa",
+    "iftarStarts": "Mulai Berbuka",
+    "fastingInProgress": "Puasa Sedang Berlangsung",
     "notFastingTime": "Bukan Waktu Puasa",
     "untilFajr": "Hingga Subuh",
-    "atMaghribTime": "Saat Waktu Maghrib"
+    "atMaghribTime": "Saat Waktu Magrib"
   },
   "PrayerTimes": {
-    "title": "Waktu Sholat Hari Ini",
+    "title": "Waktu Salat Hari Ini",
     "retry": "Coba Lagi",
     "lastUpdated": "Terakhir Diperbarui",
     "location": "Lokasi",
     "seo": {
-      "name": "Waktu Sholat",
-      "description": "Waktu sholat akurat dan kalender Islam"
+      "name": "Waktu Salat",
+      "description": "Waktu salat akurat dan kalender Islam"
     },
     "calcMethod": {
       "heading": "Metode Perhitungan",
       "main": "Metode Utama",
-      "bd_ds": "Islamic Foundation Bangladesh",
-      "bd_ua": "Universitas Islam Karachi",
-      "mwl": "Liga Muslim Dunia",
-      "karachi": "Universitas Karachi"
+      "bd_ds": "Bangladesh Islamic Foundation",
+      "bd_ua": "Islamic University, Karachi",
+      "mwl": "Muslim World League",
+      "karachi": "University of Karachi"
     },
     "asrMethods": {
       "heading": "Metode Asar",
@@ -69,14 +69,14 @@
   },
   "Navigation": {
     "home": "Beranda",
-    "prayerTimes": "Waktu Sholat",
+    "prayerTimes": "Waktu Salat",
     "forbiddenTimes": "Waktu Terlarang",
     "monthlyCalendar": "Kalender Bulanan",
     "qiblaDirection": "Arah Kiblat"
   },
   "Common": {
     "loading": "Memuat...",
-    "error": "Terjadi Kesalahan",
+    "error": "Kesalahan",
     "retry": "Coba Lagi",
     "location": "Lokasi",
     "time": "Waktu",
@@ -85,7 +85,7 @@
   },
   "HijriDate": {
     "currentDate": "Tanggal Hari Ini",
-    "hijriYear": "H"
+    "hijriYear": "Hijriah"
   },
   "Location": {
     "currentLocation": "Lokasi Saat Ini",
@@ -96,19 +96,19 @@
     "cityPlaceholder": "Masukkan nama kota",
     "setLocation": "Atur Lokasi",
     "geolocationNotSupported": "Geolokasi tidak didukung oleh browser Anda",
-    "locationAccessDenied": "Akses lokasi ditolak. Izinkan akses lokasi atau masukkan secara manual.",
+    "locationAccessDenied": "Akses lokasi ditolak. Silakan izinkan atau masukkan secara manual.",
     "unknownCity": "Kota Tidak Dikenal",
     "unknownCountry": "Negara Tidak Dikenal"
   },
   "Forbidden": {
-    "title": "Waktu Terlarang untuk Sholat",
-    "note": "Sholat sunnah (nafl) dilarang pada waktu-waktu ini. Namun, sholat qadha dapat dilakukan kapan saja.",
+    "title": "Waktu Terlarang untuk Salat",
+    "note": "Salat sunnah (nafilah) dilarang pada waktu-waktu ini. Namun, salat qadha dapat dilakukan kapan saja.",
     "period": "Periode Waktu",
     "duration": "Durasi",
     "reason": "Alasan",
     "items": [
       {
-        "period": "Setelah sholat Subuh",
+        "period": "Setelah salat Subuh",
         "duration": "Hingga matahari terbit",
         "reason": "Waktu makruh"
       },
@@ -118,38 +118,38 @@
         "reason": "Waktu penyembahan matahari"
       },
       {
-        "period": "Zawal (matahari di puncak)",
-        "duration": "15–20 menit sebelum sholat Zuhur",
-        "reason": "Matahari berada di tengah langit"
+        "period": "Zawal (matahari di titik tertinggi)",
+        "duration": "15–20 menit sebelum Zuhur",
+        "reason": "Matahari di titik tengah"
       },
       {
-        "period": "Setelah sholat Asar",
+        "period": "Setelah salat Asar",
         "duration": "Hingga matahari terbenam",
         "reason": "Waktu makruh"
       },
       {
         "period": "Saat matahari terbenam",
-        "duration": "Sekitar 20 menit saat terbenam",
+        "duration": "Sekitar 20 menit",
         "reason": "Waktu penyembahan matahari"
       }
     ]
   },
   "Qibla": {
-    "title": "Pencari Arah Kiblat",
-    "description": "Temukan arah Ka'bah bagi umat Islam yang tinggal di ",
-    "subtitle": "Temukan arah Ka'bah di Mekah dari lokasi Anda saat ini",
-    "loading": "Menghitung arah Kiblat...",
-    "error": "Tidak dapat menentukan arah Kiblat",
+    "title": "Penentu Arah Kiblat",
+    "description": "Temukan arah Ka'bah bagi umat Muslim ",
+    "subtitle": "Temukan arah Ka'bah di Mekkah dari lokasi Anda saat ini",
+    "loading": "Menghitung arah kiblat...",
+    "error": "Tidak dapat menentukan arah kiblat",
     "retry": "Coba Lagi",
-    "locationError": "Aktifkan layanan lokasi untuk menemukan arah Kiblat",
+    "locationError": "Aktifkan layanan lokasi untuk menemukan arah kiblat",
     "compassError": "Kompas tidak didukung atau izin ditolak",
     "enableCompass": "Aktifkan Kompas",
     "compassHelp": "Ketuk tombol di bawah untuk mengaktifkan kompas",
     "direction": "Arah Kiblat",
     "degrees": "derajat dari Utara",
     "facingQibla": "Anda menghadap Kiblat",
-    "turnLeft": "Putar ke kiri",
-    "turnRight": "Putar ke kanan",
+    "turnLeft": "Belok kiri",
+    "turnRight": "Belok kanan",
     "adjust": "Sesuaikan arah Anda"
   },
   "Calendar": {
@@ -160,63 +160,64 @@
     "selectedDate": "Tanggal Dipilih",
     "gregorian": "Masehi",
     "hijri": "Hijriah",
-    "prayerTimes": "Waktu Sholat",
-    "prayerTimesUnavailable": "Waktu sholat tidak tersedia",
+    "prayerTimes": "Waktu Salat",
+    "prayerTimesUnavailable": "Waktu salat tidak tersedia",
     "islamicMonths": "Bulan Islam",
     "fajr": "subuh",
     "sunrise": "matahari terbit",
     "dhuhr": "zuhur",
     "asr": "asar",
-    "maghrib": "maghrib",
+    "maghrib": "magrib",
     "isha": "isya",
     "meta": {
-      "title": "Kalender Islam - Tanggal Hijriah & Waktu Sholat",
-      "description": "Kalender Islam bulanan lengkap dengan tanggal Hijriah, waktu sholat, dan bulan Islam.",
-      "keywords": "kalender islam, kalender hijriah, waktu sholat, kalender muslim"
+      "title": "Kalender Islam - Tanggal Hijriah & Waktu Salat Bulanan",
+      "description": "Kalender Islam lengkap dengan tanggal Hijriah, waktu salat, dan bulan Islam.",
+      "keywords": "kalender islam, kalender hijriah, waktu salat, kalender muslim"
     }
   },
   "Forbidden2": {
-    "title": "Waktu Sholat Terlarang",
+    "title": "Waktu Salat Terlarang",
+    "titleWithCity": "Waktu Salat Terlarang di {city}",
     "forbidden": {
       "sunrise": {
         "title": "Matahari Terbit",
-        "desc": "Sholat dilarang saat matahari terbit."
+        "desc": "Salat dilarang pada saat matahari terbit."
       },
       "zawal": {
         "title": "Zawal (Tengah Hari)",
-        "desc": "Sholat tidak diperbolehkan saat matahari berada di titik tertinggi."
+        "desc": "Salat tidak diperbolehkan ketika matahari berada di titik tertinggi."
       },
       "sunset": {
         "title": "Matahari Terbenam",
-        "desc": "Sholat dilarang tepat saat matahari terbenam."
+        "desc": "Salat dilarang tepat pada saat matahari terbenam."
       }
     }
   },
   "PrayerTimePage": {
-    "title": "Waktu Sholat",
-    "description": "Waktu sholat akurat berdasarkan lokasi Anda",
+    "title": "Waktu Salat",
+    "description": "Waktu salat akurat berdasarkan lokasi Anda",
     "today": {
-      "title": "Waktu Sholat Hari Ini",
-      "description": "Lihat waktu sholat saat ini dengan hitung mundur",
-      "viewCurrent": "Lihat waktu Subuh, Zuhur, Asar, Maghrib, dan Isya hari ini.",
+      "title": "Waktu Salat Hari Ini",
+      "description": "Lihat waktu salat saat ini dengan hitung mundur",
+      "viewCurrent": "Lihat waktu Subuh, Zuhur, Asar, Magrib, dan Isya hari ini dengan pembaruan waktu nyata.",
       "viewButton": "Lihat Waktu Hari Ini"
     },
     "weekly": {
-      "title": "Waktu Sholat Mingguan",
-      "description": "Jadwal sholat 7 hari",
-      "feature1": "Waktu sholat selama 7 hari",
+      "title": "Waktu Salat Mingguan",
+      "description": "Jadwal salat 7 hari dengan tanggal",
+      "feature1": "Waktu salat 7 hari",
       "feature2": "Tanggal Masehi dan Hijriah",
       "feature3": "Waktu puasa harian",
       "viewButton": "Lihat Jadwal Mingguan"
     },
     "info": {
-      "title": "Tentang Waktu Sholat Kami",
+      "title": "Tentang Waktu Salat Kami",
       "accuracy": {
         "title": "Akurasi Tinggi",
         "description": "Dihitung menggunakan algoritma astronomi yang presisi"
       },
       "location": {
-        "title": "Berbasis Lokasi",
+        "title": "Berdasarkan Lokasi",
         "description": "Mendeteksi lokasi secara otomatis untuk waktu yang akurat"
       },
       "methods": {
@@ -226,21 +227,21 @@
     }
   },
   "WeeklyPrayerTimes": {
-    "title": "Waktu Sholat Mingguan",
-    "subtitle": "Jadwal sholat untuk 7 hari ke depan",
+    "title": "Waktu Salat Mingguan",
+    "subtitle": "Jadwal salat untuk 7 hari ke depan",
     "settings": {
       "title": "Pengaturan Perhitungan"
     },
     "location": "Lokasi",
     "retry": "Coba Lagi",
     "lastUpdated": "Terakhir Diperbarui",
-    "disclaimer": "Waktu dihitung berdasarkan lokasi Anda. Untuk ketepatan, konsultasikan dengan masjid setempat.",
+    "disclaimer": "Waktu dihitung berdasarkan lokasi Anda saat ini. Untuk ketepatan, konsultasikan dengan masjid setempat.",
     "calcMethod": {
       "main": "Metode Perhitungan",
-      "bd_ds": "Bangladesh (Dewan Syariah Dhaka)",
-      "bd_ua": "Bangladesh (Universitas Asia)",
-      "mwl": "Liga Muslim Dunia",
-      "karachi": "Universitas Karachi"
+      "bd_ds": "Bangladesh (Dhaka Shariah Board)",
+      "bd_ua": "Bangladesh (University of Asia)",
+      "mwl": "Muslim World League",
+      "karachi": "Karachi University"
     },
     "asrMethods": {
       "heading": "Metode Perhitungan Asar",
@@ -248,10 +249,10 @@
       "hanafi": "Hanafi"
     },
     "ramadan": {
-      "title": "Jadwal Puasa Ramadan",
+      "title": "Jadwal Puasa",
       "sehriEnds": "Akhir Sahur",
-      "iftar": "Buka Puasa",
-      "iftarIn": "Waktu Menuju Buka Puasa"
+      "iftar": "Berbuka",
+      "iftarIn": "Berbuka dalam"
     }
   },
   "HijriMonths": {
@@ -262,10 +263,10 @@
     "5": "Jumadil Awal",
     "6": "Jumadil Akhir",
     "7": "Rajab",
-    "8": "Sya'ban",
-    "9": "Ramadhan",
+    "8": "Syaban",
+    "9": "Ramadan",
     "10": "Syawal",
     "11": "Zulkaidah",
-    "12": "Zulhijjah"
+    "12": "Zulhijah"
   }
 }
