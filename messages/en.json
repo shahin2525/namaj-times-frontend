@@ -269,5 +269,9 @@
     "10": "Shawwal",
     "11": "Dhu al-Qi'dah",
     "12": "Dhu al-Hijjah"
+  },
+  "WeeklyMeta": {
+    "title": "Weekly Namaz Times | Accurate Salah Schedule",
+    "description": "View accurate weekly prayer times including Fajr, Dhuhr, Asr, Maghrib, and Isha based on your location."
   }
 }

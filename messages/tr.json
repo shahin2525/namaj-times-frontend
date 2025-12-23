@@ -268,5 +268,9 @@
     "10": "Şevval",
     "11": "Zilkade",
     "12": "Zilhicce"
+  },
+  "WeeklyMeta": {
+    "title": "Haftalık Namaz Vakitleri | Doğru Salat Programı",
+    "description": "Konumunuza göre haftalık imsak, öğle, ikindi, akşam ve yatsı namaz vakitlerini görüntüleyin."
   }
 }

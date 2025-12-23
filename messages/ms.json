@@ -268,5 +268,9 @@
     "10": "Syawal",
     "11": "Zulkaedah",
     "12": "Zulhijjah"
+  },
+  "WeeklyMeta": {
+    "title": "Waktu Solat Mingguan | Jadual Solat Tepat",
+    "description": "Lihat waktu solat mingguan yang tepat termasuk Subuh, Zohor, Asar, Maghrib dan Isyak berdasarkan lokasi anda."
   }
 }

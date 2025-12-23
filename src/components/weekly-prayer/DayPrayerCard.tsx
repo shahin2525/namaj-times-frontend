@@ -12,7 +12,7 @@ export default function DayPrayerCard({ day, isToday }: any) {
     <div className="bg-white rounded-xl shadow border">
       <button
         onClick={() => setOpen(!open)}
-        className={`w-full p-4 flex justify-between items-center
+        className={`w-full p-4 flex justify-between items-center rounded-xl
           ${isToday ? "bg-islamic-green text-white" : "bg-gray-50"}
         `}
       >

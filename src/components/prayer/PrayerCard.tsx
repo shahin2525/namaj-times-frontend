@@ -164,7 +164,6 @@ interface Props {
 }
 
 export default function PrayerCard({ prayer, isCurrent, isNext }: Props) {
-  const locale = useLocale();
   const t = useTranslations("Prayers");
 
   const prayerName = t(prayer.key); // Name based on locale

@@ -268,5 +268,9 @@
     "10": "Syawal",
     "11": "Zulkaidah",
     "12": "Zulhijah"
+  },
+  "WeeklyMeta": {
+    "title": "Jadwal Salat Mingguan | Waktu Salat Akurat",
+    "description": "Lihat jadwal salat mingguan yang akurat termasuk Subuh, Zuhur, Asar, Magrib, dan Isya berdasarkan lokasi Anda."
   }
 }
