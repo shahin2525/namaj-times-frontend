@@ -45,7 +45,7 @@ export default function Header({ locale }: HeaderProps) {
   ];
 
   const navItems = [
-    { href: "/prayer-times", label: t("prayerTimes"), icon: Clock },
+    { href: "/weekly-prayer-times", label: t("prayerTimes"), icon: Clock },
     { href: "/monthly-calendar", label: t("monthlyCalendar"), icon: Calendar },
     { href: "/forbidden-times", label: t("forbiddenTimes"), icon: Moon },
     { href: "/qibla-direction", label: t("qiblaDirection"), icon: Compass },
@@ -55,7 +55,7 @@ export default function Header({ locale }: HeaderProps) {
   const currentLanguage =
     languages.find((lang) => lang.code === locale) || languages[0];
 
-  // Get app name based on locale
+  // // Get app name based on locale
   const getAppName = () => {
     switch (locale) {
       case "bn":
@@ -64,10 +64,30 @@ export default function Header({ locale }: HeaderProps) {
         return "नमाज का समय";
       case "ar":
         return "أوقات الصلاة";
+      case "ur":
+        return "نماز اوقات";
+      case "tr":
+        return "Namaz Vakitleri";
+      case "id": // Indonesian
+        return "Waktu Sholat";
+      case "ms": // Malay
+        return "Waktu Solat";
       default:
-        return "PrayerTimes";
+        return "NamajTimes";
     }
   };
+  // const getAppName = () => {
+  //   switch (locale) {
+  //     case "bn":
+  //       return "নামাজের সময়";
+  //     case "hi":
+  //       return "नमाज का समय";
+  //     case "ar":
+  //       return "أوقات الصلاة";
+  //     default:
+  //       return "NamajTimes";
+  //   }
+  // };
 
   // Close dropdown when clicking outside
   useEffect(() => {
