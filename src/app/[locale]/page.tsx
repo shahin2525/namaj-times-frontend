@@ -22,7 +22,7 @@ export async function generateMetadata({
     en: {
       title: "Islamic Prayer Times - Accurate Salah Times",
       description:
-        "Get accurate prayer times, forbidden prayer times, and Islamic calendar based on your location.",
+        "Get accurate namaz times, forbidden namaz times, and Islamic calendar based on your location.",
       keywords:
         "prayer times, salah times, islamic prayer, forbidden times, hijri date, muslim prayer",
       openGraph: {
