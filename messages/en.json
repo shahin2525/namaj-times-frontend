@@ -273,5 +273,9 @@
   "WeeklyMeta": {
     "title": "Weekly Namaz Times | Accurate Salah Schedule",
     "description": "View accurate weekly namaz times including Fajr, Dhuhr, Asr, Maghrib, and Isha based on your location."
+  },
+  "LocaleLayoutMeta": {
+    "title": "Islamic Prayer Times",
+    "description": "Accurate Islamic prayer times (Namaz times), forbidden prayer times, Islamic calendar, and Qibla direction based on your location."
   }
 }

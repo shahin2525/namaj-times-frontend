@@ -272,5 +272,9 @@
   "WeeklyMeta": {
     "title": "Jadwal Salat Mingguan | Waktu Salat Akurat",
     "description": "Lihat jadwal salat mingguan yang akurat termasuk Subuh, Zuhur, Asar, Magrib, dan Isya berdasarkan lokasi Anda."
+  },
+  "LocaleLayoutMeta": {
+    "title": "Waktu Sholat Islam",
+    "description": "Waktu sholat Islam yang akurat (waktu salat), waktu sholat terlarang, kalender Islam, dan arah kiblat berdasarkan lokasi Anda."
   }
 }

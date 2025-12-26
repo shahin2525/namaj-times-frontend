@@ -272,5 +272,9 @@
   "WeeklyMeta": {
     "title": "Haftalık Namaz Vakitleri | Doğru Salat Programı",
     "description": "Konumunuza göre haftalık imsak, öğle, ikindi, akşam ve yatsı namaz vakitlerini görüntüleyin."
+  },
+  "LocaleLayoutMeta": {
+    "title": "İslami Namaz Vakitleri",
+    "description": "Konumunuza göre doğru İslami namaz vakitleri (Namaz saatleri), yasak namaz vakitleri, İslami takvim ve Kıble yönü."
   }
 }

@@ -272,5 +272,9 @@
   "WeeklyMeta": {
     "title": "Waktu Solat Mingguan | Jadual Solat Tepat",
     "description": "Lihat waktu solat mingguan yang tepat termasuk Subuh, Zohor, Asar, Maghrib dan Isyak berdasarkan lokasi anda."
+  },
+  "LocaleLayoutMeta": {
+    "title": "Waktu Solat Islam",
+    "description": "Waktu solat Islam yang tepat (waktu sembahyang), waktu solat yang dilarang, kalendar Islam, dan arah kiblat berdasarkan lokasi anda."
   }
 }
