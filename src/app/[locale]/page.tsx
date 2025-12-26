@@ -145,7 +145,7 @@ import PrayerTimes from "@/components/prayer/PrayerTimes";
 import HijriDate from "@/components/prayer/HijriDate";
 import AdSense from "@/components/ui/AdSense";
 import HomeForbiddenTimeSection from "@/components/forbidden/HomeForbiddenTimeSection";
-
+import { getTranslations } from "next-intl/server";
 export async function generateMetadata({
   params,
 }: {
@@ -153,37 +153,29 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
 
-  const meta = {
-    en: {
-      title: "Islamic Prayer Times - Accurate Salah Times",
-      description:
-        "Get accurate Islamic prayer times (Namaz times), forbidden prayer times, and Islamic calendar based on your location.",
-    },
-    bn: {
-      title: "ইসলামিক নামাজের সময়সূচী - সঠিক সালাতের সময়",
-      description:
-        "আপনার অবস্থান অনুযায়ী সঠিক নামাজের সময়, নিষিদ্ধ সময় এবং ইসলামিক ক্যালেন্ডার।",
-    },
-  };
+  const t = await getTranslations({
+    locale,
+    namespace: "HomeMeta",
+  });
 
-  const current = meta[locale as keyof typeof meta] || meta.en;
+  const title = t("homeTitle");
+  const description = t("homeDescription");
 
   return {
-    title: current.title,
-    description: current.description,
+    title,
+    description,
     openGraph: {
-      title: current.title,
-      description: current.description,
+      title,
+      description,
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title: current.title,
-      description: current.description,
+      title,
+      description,
     },
   };
 }
-
 export default function HomePage() {
   const t = useTranslations("Home");
 

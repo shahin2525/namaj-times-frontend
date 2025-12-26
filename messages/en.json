@@ -277,5 +277,9 @@
   "LocaleLayoutMeta": {
     "title": "Islamic Prayer Times",
     "description": "Accurate Islamic prayer times (Namaz times), forbidden prayer times, Islamic calendar, and Qibla direction based on your location."
+  },
+  "HomeMeta": {
+    "homeTitle": "Islamic Prayer Times - Accurate Salah Times",
+    "homeDescription": "Get accurate Islamic prayer times (Namaz times), forbidden prayer times, and Islamic calendar based on your location."
   }
 }

@@ -276,5 +276,9 @@
   "LocaleLayoutMeta": {
     "title": "Waktu Sholat Islam",
     "description": "Waktu sholat Islam yang akurat (waktu salat), waktu sholat terlarang, kalender Islam, dan arah kiblat berdasarkan lokasi Anda."
+  },
+  "HomeMeta": {
+    "homeTitle": "Waktu Sholat Islam - Waktu Sholat yang Akurat",
+    "homeDescription": "Dapatkan waktu sholat Islam yang akurat (waktu salat), waktu sholat terlarang, dan kalender Islam berdasarkan lokasi Anda."
   }
 }

@@ -276,5 +276,9 @@
   "LocaleLayoutMeta": {
     "title": "İslami Namaz Vakitleri",
     "description": "Konumunuza göre doğru İslami namaz vakitleri (Namaz saatleri), yasak namaz vakitleri, İslami takvim ve Kıble yönü."
+  },
+  "HomeMeta": {
+    "homeTitle": "İslami Namaz Vakitleri - Doğru Salah Vakitleri",
+    "homeDescription": "Konumunuza göre doğru İslami namaz vakitleri (namaz saatleri), yasak namaz vakitleri ve İslami takvim edinin."
   }
 }
