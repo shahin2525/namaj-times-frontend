@@ -10,7 +10,7 @@ export interface ForbiddenItem {
 
 const ForbiddenTimeCard: React.FC<{ item: ForbiddenItem }> = ({ item }) => {
   return (
-    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow p-4 mb-4 border dark:border-gray-700 text-center">
+    <div className="bg-white dark:bg-gray-900 rounded-2xl shadow p-4 mb-4 border border-red-500 dark:border-gray-700 text-center">
       <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
         {item.title}
       </h2>
