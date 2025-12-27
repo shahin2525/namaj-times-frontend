@@ -281,5 +281,11 @@
   "HomeMeta": {
     "homeTitle": "Islamic Prayer Times - Accurate Salah Times",
     "homeDescription": "Get accurate Islamic prayer times (Namaz times), forbidden prayer times, and Islamic calendar based on your location."
+  },
+  "ForbiddenTimeMeta": {
+    "title": "Forbidden Prayer (Namaz) Times | Sunrise, Zawal & Sunset",
+    "description": "Today's forbidden namaz times including sunrise, zawal, and sunset.",
+    "titleWithCity": "Forbidden Namaz Times in {city} Today",
+    "descriptionWithCity": "Today's forbidden namaz times in {city}, including sunrise, zawal and sunset."
   }
 }

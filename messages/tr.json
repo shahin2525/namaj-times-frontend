@@ -280,5 +280,11 @@
   "HomeMeta": {
     "homeTitle": "İslami Namaz Vakitleri - Doğru Salah Vakitleri",
     "homeDescription": "Konumunuza göre doğru İslami namaz vakitleri (namaz saatleri), yasak namaz vakitleri ve İslami takvim edinin."
+  },
+  "ForbiddenTimeMeta": {
+    "title": "Yasak Namaz Vakitleri | Güneş Doğuşu, Zeval ve Batışı",
+    "description": "Bugünün yasak namaz vakitleri: güneş doğuşu, zeval ve batışı dahil.",
+    "titleWithCity": "{city} Bugün Yasak Namaz Vakitleri",
+    "descriptionWithCity": "{city} için bugünün yasak namaz vakitleri, güneş doğuşu, zeval ve batışı dahil."
   }
 }

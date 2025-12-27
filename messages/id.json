@@ -280,5 +280,11 @@
   "HomeMeta": {
     "homeTitle": "Waktu Sholat Islam - Waktu Sholat yang Akurat",
     "homeDescription": "Dapatkan waktu sholat Islam yang akurat (waktu salat), waktu sholat terlarang, dan kalender Islam berdasarkan lokasi Anda."
+  },
+  "ForbiddenTimeMeta": {
+    "title": "Waktu Terlarang untuk Sholat | Matahari Terbit, Zawal & Terbenam",
+    "description": "Waktu terlarang sholat hari ini termasuk matahari terbit, zawal, dan terbenam.",
+    "titleWithCity": "Waktu Terlarang Sholat di {city} Hari Ini",
+    "descriptionWithCity": "Waktu terlarang sholat hari ini di {city}, termasuk matahari terbit, zawal dan terbenam."
   }
 }
