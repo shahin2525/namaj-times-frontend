@@ -288,5 +288,17 @@
     "description": "Bugünün yasak namaz vakitleri: güneş doğuşu, zeval ve batışı dahil.",
     "titleWithCity": "{city} Bugün Yasak Namaz Vakitleri",
     "descriptionWithCity": "{city} için bugünün yasak namaz vakitleri, güneş doğuşu, zeval ve batışı dahil."
+  },
+  "Footer": {
+    "brand": "PrayerTimes",
+    "tagline": "İslami Namaz Rehberi",
+    "description": "Doğru namaz vakitleri, yasak namaz vakitleri, İslami takvim ve kıble yönü için güvenilir kaynağınız.",
+    "rights": "Tüm hakları saklıdır.",
+    "madeWith": "İle yapıldı",
+    "forUmmah": "Müslüman Ümmeti için",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları",
+    "about": "Hakkımızda",
+    "bismillah": "Bismillahirrahmanirrahim"
   }
 }

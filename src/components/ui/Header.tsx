@@ -2,7 +2,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { Link, usePathname } from "@/i18n/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import {
   Menu,
@@ -23,6 +23,7 @@ export default function Header({ locale }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
   const t = useTranslations("Navigation");
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -107,11 +108,15 @@ export default function Header({ locale }: HeaderProps) {
   }, []);
 
   // Close mobile menu when language is changed
+  // const handleLanguageChange = (langCode: string) => {
+  //   setIsLanguageDropdownOpen(false);
+  //   setIsMenuOpen(false);
+  // };
   const handleLanguageChange = (langCode: string) => {
+    router.replace(pathname, { locale: langCode });
     setIsLanguageDropdownOpen(false);
     setIsMenuOpen(false);
   };
-
   return (
     <header className="bg-islamic-green text-white shadow-lg sticky top-0 z-50">
       <div className="container-responsive">

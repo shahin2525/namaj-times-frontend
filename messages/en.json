@@ -289,5 +289,17 @@
     "description": "Today's forbidden namaz times including sunrise, zawal, and sunset.",
     "titleWithCity": "Forbidden Namaz Times in {city} Today",
     "descriptionWithCity": "Today's forbidden namaz times in {city}, including sunrise, zawal and sunset."
+  },
+  "Footer": {
+    "brand": "PrayerTimes",
+    "tagline": "Islamic Prayer Guide",
+    "description": "Your trusted source for accurate prayer times, forbidden prayer times, Islamic calendar, and Qibla direction.",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "forUmmah": "for the Muslim Ummah",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "about": "About Us",
+    "bismillah": "In the name of Allah, the Most Gracious, the Most Merciful"
   }
 }

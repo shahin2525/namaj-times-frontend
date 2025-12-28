@@ -288,5 +288,17 @@
     "description": "Waktu terlarang sholat hari ini termasuk matahari terbit, zawal, dan terbenam.",
     "titleWithCity": "Waktu Terlarang Sholat di {city} Hari Ini",
     "descriptionWithCity": "Waktu terlarang sholat hari ini di {city}, termasuk matahari terbit, zawal dan terbenam."
+  },
+  "Footer": {
+    "brand": "PrayerTimes",
+    "tagline": "Panduan Sholat Islam",
+    "description": "Sumber terpercaya Anda untuk waktu sholat yang akurat, waktu sholat terlarang, kalender Islam, dan arah kiblat.",
+    "rights": "Hak cipta dilindungi undang-undang.",
+    "madeWith": "Dibuat dengan",
+    "forUmmah": "untuk Umat Islam",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Ketentuan Layanan",
+    "about": "Tentang Kami",
+    "bismillah": "Bismillahirrahmanirrahim"
   }
 }
