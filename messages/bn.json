@@ -221,7 +221,9 @@
       "title": "রোজার সময়সূচী",
       "sehriEnds": "সেহরি শেষ",
       "iftar": "ইফতার",
-      "iftarIn": "ইফতার বাকি"
+      "iftarIn": "ইফতার বাকি",
+      "fastingProgress": "রোজা চলছে",
+      "notFasting": "রোজার সময় নয়"
     }
   },
   "PrayerTimePage": {

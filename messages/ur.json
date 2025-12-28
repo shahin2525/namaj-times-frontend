@@ -252,7 +252,9 @@
       "title": "رمضان کا شیڈول",
       "sehriEnds": "سحری ختم",
       "iftar": "افطار",
-      "iftarIn": "افطار باقی"
+      "iftarIn": "افطار باقی",
+      "fastingProgress": "روزہ جاری ہے",
+      "notFasting": "روزے کا وقت نہیں"
     }
   },
   "HijriMonths": {

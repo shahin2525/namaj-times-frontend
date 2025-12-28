@@ -252,7 +252,9 @@
       "title": "Ramazan Oruç Programı",
       "sehriEnds": "Sahur Bitişi",
       "iftar": "İftar",
-      "iftarIn": "İftara Kalan"
+      "iftarIn": "İftara Kalan",
+      "fastingProgress": "Oruç devam ediyor",
+      "notFasting": "Oruç vakti değil"
     }
   },
   "HijriMonths": {

@@ -252,7 +252,9 @@
       "title": "रमज़ान रोज़ा समय",
       "sehriEnds": "सेहरी समाप्त",
       "iftar": "इफ़्तार",
-      "iftarIn": "इफ़्तार में"
+      "iftarIn": "इफ़्तार में",
+      "fastingProgress": "रोज़ा चल रहा है",
+      "notFasting": "रोज़े का समय नहीं"
     }
   },
   "HijriMonths": {

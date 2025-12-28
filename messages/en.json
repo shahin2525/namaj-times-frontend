@@ -253,7 +253,9 @@
       "title": "Fasting Schedule",
       "sehriEnds": "Sehri Ends",
       "iftar": "Iftar",
-      "iftarIn": "Iftar in"
+      "iftarIn": "Iftar in",
+      "fastingProgress": "Fasting in progress",
+      "notFasting": "Not fasting time"
     }
   },
   "HijriMonths": {

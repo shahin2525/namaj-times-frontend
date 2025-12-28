@@ -93,13 +93,16 @@ export default function FastingTimes({
                 fastingTimes.isFastingTime ? "bg-yellow-500" : "bg-green-500"
               }`}
             ></span>
+            {/* {fastingTimes.isFastingTime?{t("fastingProgress")}:{t("notFasting")}} */}
+            {/* // ? locale === "bn"
+              //   ? "রোজা চলমান"
+              //   : "Fasting in progress"
+              // : locale === "bn"
+              // ? "রোজা নেই"
+              // : "Not fasting time" */}
             {fastingTimes.isFastingTime
-              ? locale === "bn"
-                ? "রোজা চলমান"
-                : "Fasting in progress"
-              : locale === "bn"
-              ? "রোজা নেই"
-              : "Not fasting time"}
+              ? t("fastingProgress")
+              : t("notFasting")}
           </span>
         </div>
       </div>

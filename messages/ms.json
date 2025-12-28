@@ -252,7 +252,9 @@
       "title": "Jadual Puasa",
       "sehriEnds": "Sahur Tamat",
       "iftar": "Iftar",
-      "iftarIn": "Iftar dalam"
+      "iftarIn": "Iftar dalam",
+      "fastingProgress": "Sedang berpuasa",
+      "notFasting": "Bukan masa puasa"
     }
   },
   "HijriMonths": {

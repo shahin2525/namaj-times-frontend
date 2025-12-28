@@ -252,7 +252,9 @@
       "title": "جدول رمضان",
       "sehriEnds": "نهاية السحور",
       "iftar": "الإفطار",
-      "iftarIn": "الوقت المتبقي للإفطار"
+      "iftarIn": "الوقت المتبقي للإفطار",
+      "fastingProgress": "الصيام جارٍ",
+      "notFasting": "ليس وقت الصيام"
     }
   },
   "HijriMonths": {
