@@ -25,17 +25,27 @@ export default function Footer() {
   ];
 
   const legalLinks = [
-    { href: "/privacy-policy", label: t("privacy") },
-    { href: "/terms-of-service", label: t("terms") },
-    { href: "/about", label: t("about") },
-    { href: "/contact", label: t("contact") },
-    { href: "/disclaimer", label: t("disclaimer") },
+    { href: "/privacy-policy", label: "Privacy Policy" },
+    { href: "/terms-of-service", label: "Terms of Service" },
+    { href: "/about", label: "About Us" },
+    { href: "/contact", label: "Contact Us" },
+    { href: "/disclaimer", label: "Disclaimer" },
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-emerald-950 to-emerald-900 text-white">
+    <footer className="bg-gradient-to-b from-emerald-950 to-emerald-900 text-white ">
       {/* Changed padding strategy for better side spacing */}
+      <div className="h-2.5" />
       <div className="mx-auto w-full max-w-screen-xl px-6 py-12 sm:px-10 md:px-12 lg:px-16">
+        {/* Islamic phrase */}
+        <div className="mt-12 text-center">
+          <p className="text-xl sm:text-2xl font-arabic text-amber-500/90 tracking-wider">
+            بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+          </p>
+          <p className="mt-2 text-xs sm:text-sm text-emerald-400/70">
+            {t("bismillah")}
+          </p>
+        </div>
         {/* Top section - Brand + Description */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-10 pb-12 border-b border-emerald-700/50">
           {/* Brand */}
@@ -131,18 +141,9 @@ export default function Footer() {
               ))}
             </div>
           </div>
-
-          {/* Islamic phrase */}
-          <div className="mt-12 text-center">
-            <p className="text-xl sm:text-2xl font-arabic text-amber-500/90 tracking-wider">
-              بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
-            </p>
-            <p className="mt-2 text-xs sm:text-sm text-emerald-400/70">
-              {t("bismillah")}
-            </p>
-          </div>
         </div>
       </div>
+      <div className="inline sm:block h-2.5" />
     </footer>
   );
 }
