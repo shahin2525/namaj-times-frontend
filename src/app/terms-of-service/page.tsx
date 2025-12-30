@@ -111,10 +111,11 @@ export default function TermsOfService() {
         <p>
           📧 Email:{" "}
           <a
-            href="mailto:contact@yourdomain.com"
+            href="mailto:mdshahin.dev99@gmail.com"
             className="text-emerald-700 underline hover:text-emerald-900 dark:text-emerald-300"
           >
-            contact@yourdomain.com
+            {/* contact@yourdomain.com */}
+            mdshahin.dev99@gmail.com
           </a>
         </p>
       </section>

@@ -30,6 +30,7 @@ export default function Footer() {
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact Us" },
     { href: "/disclaimer", label: "Disclaimer" },
+    // { href: "/about", label: nav("aboutUs") },
   ];
 
   return (

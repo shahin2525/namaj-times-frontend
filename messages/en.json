@@ -73,7 +73,8 @@
     "prayerTimes": "Weekly Schedule",
     "forbiddenTimes": "Forbidden Times",
     "monthlyCalendar": "Monthly Calendar",
-    "qiblaDirection": "Qibla Direction"
+    "qiblaDirection": "Qibla Direction",
+    "aboutUs": "About Us"
   },
   "Common": {
     "loading": "Loading...",
